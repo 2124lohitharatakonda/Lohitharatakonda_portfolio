@@ -53,7 +53,118 @@ const dirObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => dirObserver.observe(el));
 
-/* ---- 5. ACTIVE NAV link on scroll ---- */
+/* ---- 5. SCROLL PROGRESS BAR ---- */
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = ((window.scrollY / total) * 100) + '%';
+}, { passive: true });
+
+/* ---- 6. HERO MOUSE GLOW ---- */
+const heroSection = document.getElementById('home');
+const heroGlow = document.querySelector('.hero-glow');
+if (heroSection && heroGlow) {
+  heroSection.addEventListener('mousemove', e => {
+    const r = heroSection.getBoundingClientRect();
+    heroSection.style.setProperty('--gx', (e.clientX - r.left) + 'px');
+    heroSection.style.setProperty('--gy', (e.clientY - r.top) + 'px');
+  });
+}
+
+/* ---- 7. FLOATING PARTICLES in hero ---- */
+const particleContainer = document.getElementById('heroParticles');
+if (particleContainer) {
+  for (let i = 0; i < 22; i++) {
+    const p = document.createElement('div');
+    p.className = 'hero-particle';
+    const size = Math.random() * 6 + 3;
+    p.style.cssText = `
+      width:${size}px;
+      height:${size}px;
+      left:${Math.random() * 100}%;
+      animation-duration:${Math.random() * 12 + 8}s;
+      animation-delay:${Math.random() * 10}s;
+      opacity:0;
+    `;
+    particleContainer.appendChild(p);
+  }
+}
+
+/* ---- 8. TYPEWRITER on hero role ---- */
+const roleEl = document.querySelector('.hero-role');
+if (roleEl) {
+  const roles = [
+    'Software Engineer',
+    'AI & ML Engineer',
+    'Full-Stack Developer',
+    'Published Researcher',
+    'Cloud Architect'
+  ];
+  const cursor = document.createElement('span');
+  cursor.className = 'typed-cursor';
+  roleEl.textContent = '';
+  roleEl.appendChild(cursor);
+
+  let ri = 0, ci = 0, deleting = false;
+  let textNode = document.createTextNode('');
+  roleEl.insertBefore(textNode, cursor);
+
+  function typeStep() {
+    const word = roles[ri];
+    if (!deleting) {
+      ci++;
+      textNode.textContent = word.slice(0, ci);
+      if (ci >= word.length) {
+        deleting = true;
+        setTimeout(typeStep, 1800);
+        return;
+      }
+    } else {
+      ci--;
+      textNode.textContent = word.slice(0, ci);
+      if (ci <= 0) {
+        deleting = false;
+        ri = (ri + 1) % roles.length;
+        ci = 0;
+      }
+    }
+    setTimeout(typeStep, deleting ? 55 : 95);
+  }
+  setTimeout(typeStep, 3200);
+}
+
+/* ---- 9. 3D TILT on project & skill cards ---- */
+document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left;
+    const y = e.clientY - r.top;
+    const rx = ((y - r.height / 2) / r.height) * 10;
+    const ry = ((x - r.width  / 2) / r.width)  * -10;
+    card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.transition = 'transform 0.5s ease';
+    setTimeout(() => card.style.transition = '', 500);
+  });
+});
+
+/* ---- 10. SKILL TAG stagger pop-in ---- */
+document.querySelectorAll('#skills .tag').forEach(tag => tag.classList.add('tag-animate'));
+const tagObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const tags = entry.target.querySelectorAll('.tag-animate');
+      tags.forEach((t, i) => setTimeout(() => t.classList.add('tag-visible'), i * 60));
+    } else {
+      entry.target.querySelectorAll('.tag-animate').forEach(t => t.classList.remove('tag-visible'));
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('#skills .card').forEach(card => tagObserver.observe(card));
+
+/* ---- 11. ACTIVE NAV link on scroll ---- */
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 const activeObserver = new IntersectionObserver((entries) => {
