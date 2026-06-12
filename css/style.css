@@ -152,7 +152,7 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   text-align: center;
-  background-image: url('../bg_image.jpg');
+  background-image: url('../images/bg_image.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center top;
@@ -602,7 +602,7 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
 /* ---- 11. SKILLS ---- */
 #skills {
   position: relative;
-  background-image: url('../bg_image2.jpg');
+  background-image: url('../images/bg_image2.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
