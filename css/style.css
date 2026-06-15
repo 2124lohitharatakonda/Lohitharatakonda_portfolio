@@ -714,9 +714,8 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
 /* GitHub-linked clickable card */
 .card--github-link {
   display: block;
-  text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  cursor: pointer !important;
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);

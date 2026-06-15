@@ -133,7 +133,15 @@ if (roleEl) {
   setTimeout(typeStep, 3200);
 }
 
-/* ---- 9. 3D TILT on project & skill cards ---- */
+/* ---- 9. GITHUB CARD CLICK ---- */
+document.querySelectorAll('.card--github-link').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    window.open(card.dataset.github, '_blank', 'noopener,noreferrer');
+  });
+});
+
+/* ---- 10a. 3D TILT on project & skill cards ---- */
 document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
@@ -150,7 +158,7 @@ document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
   });
 });
 
-/* ---- 10. SKILL TAG stagger pop-in ---- */
+/* ---- 10b. SKILL TAG stagger pop-in ---- */
 document.querySelectorAll('#skills .tag').forEach(tag => tag.classList.add('tag-animate'));
 const tagObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
