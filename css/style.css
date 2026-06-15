@@ -711,6 +711,76 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
 }
+/* GitHub-linked clickable card */
+.card--github-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+.card--github-link:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+  transform: translateY(-6px);
+  border-color: #24292e;
+}
+
+/* Top badge — slides down on hover */
+.card-gh-badge {
+  position: absolute;
+  top: -40px;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #24292e;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.32rem 0.75rem;
+  border-radius: 0 0 8px 8px;
+  transition: top 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  z-index: 2;
+  white-space: nowrap;
+}
+.card--github-link:hover .card-gh-badge {
+  top: 0;
+}
+
+/* Bottom footer link */
+.card-gh-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--g4);
+  transition: color 0.25s;
+}
+.card--github-link:hover .card-gh-footer {
+  color: #24292e;
+}
+
+/* Ripple on click */
+.card--github-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(36,41,46,0.06);
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.card--github-link:active::after {
+  opacity: 1;
+}
+
 .pub-note {
   margin-top: 0.75rem;
   font-size: 0.75rem; font-weight: 600;
