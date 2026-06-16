@@ -677,6 +677,53 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   gap: 1rem;
   flex-wrap: wrap;
 }
+.exp-head-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+.exp-logo-wrap {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--sh);
+}
+.exp-logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+.exp-logo--cdot {
+  background: #0d1b6e;
+  border-color: #0d1b6e;
+  color: #ffffff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  padding: 0;
+}
+.exp-logo--senecio {
+  background: var(--g1);
+  border-color: var(--g1);
+  color: #ffffff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+}
 .exp-role {
   font-size: 1.05rem; font-weight: 700;
   color: var(--black); margin-bottom: 0.2rem;
