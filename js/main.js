@@ -141,8 +141,9 @@ document.querySelectorAll('.card--github-link').forEach(card => {
   });
 });
 
-/* ---- 10a. 3D TILT on project & skill cards ---- */
-document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
+/* ---- 10a. 3D TILT on project & skill cards (desktop only) ---- */
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
+if (!isTouchDevice) document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const x = e.clientX - r.left;
@@ -156,7 +157,7 @@ document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
     card.style.transition = 'transform 0.5s ease';
     setTimeout(() => card.style.transition = '', 500);
   });
-});
+});  // end if (!isTouchDevice)
 
 /* ---- 10b. SKILL TAG stagger pop-in ---- */
 document.querySelectorAll('#skills .tag').forEach(tag => tag.classList.add('tag-animate'));
