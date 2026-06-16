@@ -77,7 +77,7 @@ ul { list-style: none; }
   padding: 1.1rem 4.5rem;
 }
 .nav-logo {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.35rem; font-weight: 800;
   letter-spacing: -0.02em;
   background: var(--grad);
@@ -272,7 +272,7 @@ ul { list-style: none; }
   animation: slowRise 1.4s 0.3s cubic-bezier(0.16,1,0.3,1) forwards;
 }
 .hero-name {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(2.8rem, 6.5vw, 5rem);
   font-weight: 800;
   line-height: 1.1;
@@ -414,7 +414,7 @@ section { padding: 6rem 0; }
   border-radius: 2px;
 }
 .s-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -466,7 +466,7 @@ section { padding: 6rem 0; }
   margin-bottom: 0.65rem;
 }
 .card-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem; font-weight: 600;
   color: var(--text);
   margin-bottom: 0.75rem;
@@ -545,7 +545,7 @@ section { padding: 6rem 0; }
   content: '\201C';
   position: absolute;
   font-size: 18rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: rgba(37,99,235,0.04);
   line-height: 0.75;
   top: -2.5rem; left: 50%;
@@ -553,7 +553,7 @@ section { padding: 6rem 0; }
   z-index: 0; pointer-events: none; user-select: none;
 }
 .about-heading-script {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 700;
   color: var(--text);
@@ -731,12 +731,12 @@ a.edu-link:hover { color: var(--secondary); text-decoration: underline; }
   background: linear-gradient(135deg, #1e293b, #0f172a);
   border-color: rgba(37,99,235,0.3);
   color: var(--secondary);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.52rem; font-weight: 800;
   text-align: center; line-height: 1.35; letter-spacing: 0.06em;
 }
 .exp-role {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem; font-weight: 600;
   color: var(--text); margin-bottom: 0.2rem;
 }
@@ -993,7 +993,7 @@ a.edu-link:hover { color: var(--secondary); text-decoration: underline; }
 }
 .status-row {
   display: flex; align-items: center; gap: 0.55rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.9rem; font-weight: 600; color: var(--text);
 }
 .status-dot {
@@ -1053,7 +1053,7 @@ footer {
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem; flex-wrap: wrap;
 }
-.footer-name { font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text-2); }
+.footer-name { font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--text-2); }
 .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--text-3); }
 .footer-li { color: var(--text-3); display: flex; align-items: center; transition: color 0.2s; }
 .footer-li:hover { color: var(--secondary); }
