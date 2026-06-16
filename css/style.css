@@ -24,13 +24,15 @@
   --inner:  1160px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
   font-family: 'EB Garamond', Georgia, serif;
   background: var(--white);
   color: var(--g1);
   overflow-x: hidden;
+  font-size: 1.08rem;
+  line-height: 1.85;
 }
 
 img { display: block; max-width: 100%; }
@@ -373,9 +375,9 @@ section { padding: 6rem 0; }
   line-height: 1.35;
 }
 .card-body {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--g3);
-  line-height: 1.8;
+  line-height: 1.85;
   text-align: justify;
 }
 
@@ -579,7 +581,7 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   transform: scale(1.08) translateY(-12px);
 }
 .bio-text {
-  font-size: 1.08rem; color: var(--g2); line-height: 1.85;
+  font-size: 1.18rem; color: var(--g2); line-height: 1.9;
   margin-bottom: 1.2rem;
   text-align: justify;
 }
@@ -743,7 +745,7 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   display: flex; flex-direction: column; gap: 0.5rem;
 }
 .exp-bullets li {
-  font-size: 1rem; color: var(--g3); line-height: 1.75;
+  font-size: 1.1rem; color: var(--g3); line-height: 1.82;
   padding-left: 1rem; position: relative;
   text-align: justify;
 }
@@ -902,7 +904,7 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   align-items: start;
 }
 .contact-intro {
-  font-size: 1.08rem; color: var(--g3); line-height: 1.85;
+  font-size: 1.18rem; color: var(--g3); line-height: 1.9;
   margin-bottom: 2rem;
   text-align: justify;
 }
