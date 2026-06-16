@@ -27,23 +27,10 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Lora', 'Inter', serif;
+  font-family: 'EB Garamond', Georgia, serif;
   background: var(--white);
   color: var(--g1);
   overflow-x: hidden;
-}
-
-/* Keep UI elements (nav, buttons, tags, labels) in Inter */
-#nav, .nav-links, .mobile-menu,
-.btn, .btn-pill-outline, .btn-pill-solid,
-.tag, .card-label, .s-eyebrow,
-.exp-date, .exp-co, .cert-item,
-.c-lbl, .c-val, .res-num, .res-journal,
-.hero-hello, .hero-role,
-.edu-section-label, .exp-bullets li,
-.card-gh-footer, .card-gh-badge,
-.award-icon, .status-detail, .footer-copy {
-  font-family: 'Inter', sans-serif;
 }
 
 img { display: block; max-width: 100%; }
@@ -386,9 +373,10 @@ section { padding: 6rem 0; }
   line-height: 1.35;
 }
 .card-body {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--g3);
-  line-height: 1.75;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 /* ---- 9. ABOUT ---- */
@@ -591,8 +579,9 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   transform: scale(1.08) translateY(-12px);
 }
 .bio-text {
-  font-size: 0.97rem; color: var(--g2); line-height: 1.8;
+  font-size: 1.08rem; color: var(--g2); line-height: 1.85;
   margin-bottom: 1.2rem;
+  text-align: justify;
 }
 .bio-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
@@ -754,8 +743,9 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   display: flex; flex-direction: column; gap: 0.5rem;
 }
 .exp-bullets li {
-  font-size: 0.875rem; color: var(--g3); line-height: 1.65;
+  font-size: 1rem; color: var(--g3); line-height: 1.75;
   padding-left: 1rem; position: relative;
+  text-align: justify;
 }
 .exp-bullets li::before {
   content: '';
@@ -912,8 +902,9 @@ a.edu-link:hover { color: var(--black); text-decoration: underline; }
   align-items: start;
 }
 .contact-intro {
-  font-size: 1rem; color: var(--g3); line-height: 1.8;
+  font-size: 1.08rem; color: var(--g3); line-height: 1.85;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 .c-items { display: flex; flex-direction: column; gap: 0.9rem; }
 .c-item {
