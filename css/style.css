@@ -27,10 +27,23 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lora', 'Inter', serif;
   background: var(--white);
   color: var(--g1);
   overflow-x: hidden;
+}
+
+/* Keep UI elements (nav, buttons, tags, labels) in Inter */
+#nav, .nav-links, .mobile-menu,
+.btn, .btn-pill-outline, .btn-pill-solid,
+.tag, .card-label, .s-eyebrow,
+.exp-date, .exp-co, .cert-item,
+.c-lbl, .c-val, .res-num, .res-journal,
+.hero-hello, .hero-role,
+.edu-section-label, .exp-bullets li,
+.card-gh-footer, .card-gh-badge,
+.award-icon, .status-detail, .footer-copy {
+  font-family: 'Inter', sans-serif;
 }
 
 img { display: block; max-width: 100%; }
