@@ -141,6 +141,22 @@ document.querySelectorAll('.card--github-link').forEach(card => {
   });
 });
 
+/* ---- 9b. PROJECT FILTER TABS ---- */
+const filterBtns = document.querySelectorAll('.proj-filter');
+const pcards = document.querySelectorAll('.pcard');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    pcards.forEach(card => {
+      const cats = (card.dataset.cat || '').split(' ');
+      const show = filter === 'all' || cats.includes(filter);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+});
+
 /* ---- 10a. 3D TILT on project & skill cards (desktop only) ---- */
 const isTouchDevice = window.matchMedia('(hover: none)').matches;
 if (!isTouchDevice) document.querySelectorAll('.proj-grid .card, #skills .card').forEach(card => {
