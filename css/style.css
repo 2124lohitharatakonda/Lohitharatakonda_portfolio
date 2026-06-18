@@ -5,6 +5,7 @@
 
 /* ---- RESET ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
 
 /* ---- TOKENS ---- */
 :root {
@@ -1960,3 +1961,62 @@ footer { background: #fff; border-top-color: rgba(0,0,0,0.07); }
 .bio-photo { border-color: rgba(232,0,122,0.22); box-shadow: 0 8px 40px rgba(13,27,74,0.14), 0 4px 24px rgba(232,0,122,0.15); }
 .bio-photo::before { background: linear-gradient(to bottom, transparent 60%, rgba(255,255,255,0.5) 100%); }
 .bio-photo:hover { box-shadow: 0 12px 50px rgba(13,27,74,0.18), 0 0 40px rgba(232,0,122,0.22); }
+
+/* ============================================================
+   MOBILE FIXES — comprehensive responsive pass
+   ============================================================ */
+
+/* 1. Sections with decorative pseudo-elements must clip them */
+#home, #about, #skills, #awards, #contact, #research { overflow: hidden; }
+
+/* 2. Project/awards inner: override 2rem padding on mobile
+      (these IDs have higher specificity than .inner alone) */
+@media (max-width: 640px) {
+  #projects .inner, #awards .inner { padding: 0 1.2rem; }
+  /* Fix negative inline margins pushing cards-row beyond inner bounds */
+  .cards-row { margin-left: 0 !important; margin-right: 0 !important; }
+  /* Fix grid 1fr not constraining to container due to min-width:auto */
+  .cards-row { grid-template-columns: minmax(0, 1fr) !important; }
+  .cards-row > * { min-width: 0; overflow: hidden; }
+  /* Contact grid: single column on small screens */
+  .c-items { grid-template-columns: 1fr; }
+  .c-item:nth-child(even) { border-right: none; }
+  .c-item:last-child:nth-child(odd) { grid-column: auto; }
+  /* Section title: prevent overflow */
+  .s-title, .s-eyebrow { word-break: break-word; overflow-wrap: break-word; max-width: 100%; }
+  /* Hero inner: prevent clipping of name */
+  .hero-inner { overflow: visible; }
+  /* About bio photo constrained */
+  .bio-photo { width: 100%; max-width: 320px; margin: 0 auto; }
+  /* pcard image area: taller on mobile so contain images show better */
+  .pcard-right { height: 260px !important; }
+  /* pcard-left padding tightened */
+  .pcard-left { padding: 1.4rem 1.2rem; }
+  /* Award cards: ensure grid is single column */
+  .awards-grid { grid-template-columns: 1fr !important; }
+  /* Research cards full-width */
+  .res-card { max-width: 100%; }
+  /* res-list full-width */
+  .res-list { overflow: hidden; }
+  /* Filters wrap nicely */
+  .proj-filters { gap: 0.4rem; }
+  .proj-filter { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  #projects .inner, #awards .inner { padding: 0 1rem; }
+  .pcard-right { height: 220px !important; }
+  .pcard-left { padding: 1.2rem 1rem; }
+  /* Contact item padding already set above at 640px; shrink icon further */
+  .c-icon { width: 32px; height: 32px; }
+  /* Hero stats on very small screens */
+  .hero-name { font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
+}
+
+/* 3. Hamburger/mobile-menu – ensure they never exceed viewport */
+.mobile-menu { max-width: 100vw; box-sizing: border-box; }
+.mobile-menu .nav-links-mobile { padding: 0 1.2rem; }
+
+/* 4. All images constrained (belt-and-suspenders) */
+.cards-row img, .bio-row img, .res-card img,
+.award-card img, .pcard img { max-width: 100%; height: auto; }
