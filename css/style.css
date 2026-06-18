@@ -2020,3 +2020,277 @@ footer { background: #fff; border-top-color: rgba(0,0,0,0.07); }
 /* 4. All images constrained (belt-and-suspenders) */
 .cards-row img, .bio-row img, .res-card img,
 .award-card img, .pcard img { max-width: 100%; height: auto; }
+
+/* ============================================================
+   PROFESSIONAL AUDIT — SENIOR-LEVEL COMPLETE MOBILE OVERHAUL
+   ============================================================ */
+
+/* ── Accessibility: reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Accessibility: focus rings ── */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+a:focus-visible, button:focus-visible { outline-color: var(--primary); }
+
+/* ── Accessibility: minimum touch targets ── */
+.hamburger { min-width: 44px; min-height: 44px; padding: 10px 4px; justify-content: center; align-items: center; }
+.btn-pill-solid, .btn-pill-outline, .btn { min-height: 44px; }
+.hero-social-link { width: 44px; height: 44px; }
+.proj-filter { min-height: 38px; display: inline-flex; align-items: center; }
+.mobile-menu a { min-height: 52px; display: flex; align-items: center; }
+
+/* ============================================================
+   HERO SECTION — CRITICAL MOBILE RECONSTRUCTION
+   The root cause of name cutoff: .hero-right { min-height: 540px }
+   was eating all vertical space before text even rendered.
+   ============================================================ */
+
+@media (max-width: 960px) {
+  /* Kill the fixed min-height that pushes content off-screen */
+  .hero-right { min-height: unset !important; }
+  /* Reduce gap between stacked sections */
+  .hero-inner { gap: 1.5rem !important; }
+}
+
+@media (max-width: 640px) {
+  /* Section itself */
+  #home { min-height: 100dvh; }
+  .hero-inner { padding: 5rem 1.2rem 1.5rem !important; gap: 1.2rem !important; }
+  .hero-right { min-height: unset !important; }
+
+  /* Shrink the photo ring to a reasonable mobile size */
+  .hero-photo-ring { width: 210px !important; height: 270px !important; }
+  .hero-circle-ring {
+    width: 200px !important; height: 200px !important;
+    bottom: 15px !important;
+  }
+  .hero-photo-inner {
+    width: 300px !important; height: 480px !important;
+    bottom: 25px !important;
+  }
+
+  /* Hide ALL floating AI cards — they collide on mobile.
+     Stats strip already shows the same info below the hero. */
+  .hero-ai-card { display: none !important; }
+  .hero-avail-badge { display: none !important; }
+  .hero-ai-scan { display: none !important; }
+
+  /* Kill GPU-heavy decorative elements that serve no mobile purpose */
+  .hero-ai-canvas { display: none !important; }
+  .hero-particles { display: none !important; }
+  .hero-photo-ring::before { display: none !important; }
+  .hero-photo-ring::after { display: none !important; }
+  #home::before { display: none !important; }
+  .hero-circle-ring::before { animation: none !important; }
+
+  /* Hero text: ensure name NEVER clips */
+  .hero-name {
+    font-size: clamp(1.5rem, 6.8vw, 2rem) !important;
+    line-height: 1.15 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+  .hero-greeting { font-size: 0.88rem !important; margin-bottom: 0.2rem !important; }
+  /* Hide bio on mobile — it duplicates the About section */
+  .hero-bio { display: none !important; }
+  /* Hide empty typewriter line — it adds dead height on mobile */
+  .hero-role { display: none !important; }
+  .hero-badge { font-size: 0.72rem !important; margin-bottom: 0.9rem !important; }
+  .hero-role-tags { gap: 0.35rem !important; margin: 0.6rem 0 !important; }
+  .hero-role-tag { font-size: 0.72rem !important; padding: 0.18rem 0.6rem !important; }
+  .hero-cta { margin-top: 0.6rem !important; }
+  .hero-social { margin-top: 0.75rem !important; }
+
+  /* Stats strip: visually elevate it since floating cards are gone */
+  .hero-stats-strip { padding: 0 1.2rem 2rem !important; }
+  .hero-stats-grid {
+    background: rgba(13,27,74,0.05);
+    border: 1px solid rgba(232,0,122,0.15);
+    border-radius: 14px;
+    padding: 0.9rem 0.5rem !important;
+    gap: 0 !important;
+  }
+  .hero-stat { padding: 0.5rem 0.25rem !important; }
+  .hero-stat-num { font-size: 1.25rem !important; }
+  .hero-stat-lbl { font-size: 0.58rem !important; }
+}
+
+@media (max-width: 480px) {
+  .hero-inner { padding: 4.5rem 1rem 1rem !important; }
+  .hero-photo-ring { width: 180px !important; height: 235px !important; }
+  .hero-circle-ring { width: 170px !important; height: 170px !important; }
+  .hero-photo-inner { width: 260px !important; height: 420px !important; }
+  .hero-name { font-size: clamp(1.35rem, 6.5vw, 1.8rem) !important; }
+}
+
+/* ============================================================
+   EXPERIENCE CARDS — LAYOUT RECONSTRUCTION
+   Problems:
+   1. font-size:1.65rem title word-breaks mid-word on narrow mobile
+   2. Background image opacity:0.75 bleeds over text on mobile
+   3. Horizontal exp-head overflows narrow cards
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Stack logo + role vertically so title never wraps incorrectly */
+  .exp-head-left { flex-direction: column !important; gap: 0.6rem !important; align-items: flex-start !important; }
+
+  /* Scale down role title — the #1 word-break cause */
+  .exp-role {
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+  .exp-co { font-size: 0.9rem !important; }
+
+  /* Make background image nearly invisible on mobile — text legibility first */
+  .exp-card > img[aria-hidden="true"] { opacity: 0.12 !important; }
+}
+
+@media (max-width: 640px) {
+  /* Override inline padding on exp-card */
+  .exp-card { padding: 1.4rem 1.2rem 1.4rem 1.4rem !important; min-height: unset !important; }
+
+  .exp-role { font-size: 1rem !important; }
+  .exp-co { font-size: 0.82rem !important; }
+  .exp-bullets { font-size: 0.85rem !important; line-height: 1.7 !important; }
+  .exp-bullets li { margin-bottom: 0.5rem !important; }
+
+  /* Logo: smaller on mobile */
+  .exp-logo-wrap {
+    width: 46px !important; height: 46px !important;
+    font-size: 0.5rem !important; line-height: 1.2 !important;
+    border-radius: 8px !important;
+  }
+
+  /* Date badge: tighter on mobile */
+  .exp-date { font-size: 0.78rem !important; padding: 0.35rem 0.75rem !important; }
+}
+
+/* ============================================================
+   PERFORMANCE — MOBILE GPU COST REDUCTION
+   Eliminates backdrop-filter, blur, complex shadows on mobile
+   where they cause jank and high Lighthouse penalty.
+   ============================================================ */
+
+@media (max-width: 768px) {
+  /* Remove backdrop-filter — worst GPU offender */
+  .hero-ai-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .exp-date { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+  /* Flatten card shadows on mobile — simpler compositing */
+  .card { box-shadow: 0 2px 16px rgba(13,27,74,0.12) !important; }
+  .card:hover { transform: none !important; box-shadow: 0 4px 20px rgba(13,27,74,0.16) !important; }
+  .award-card:hover { transform: translateY(-2px) !important; }
+
+  /* Disable parallax section on mobile — pure GPU waste */
+  .parallax { min-height: 80px !important; background-attachment: scroll !important; }
+}
+
+@media (max-width: 640px) {
+  /* Disable all scroll-triggered hover transforms — mobile has no hover */
+  .bio-photo:hover { transform: none !important; }
+  .bio-photo:hover img { transform: none !important; }
+  .pcard:hover { transform: none !important; }
+  .award-card:hover { transform: none !important; }
+  .c-item:hover { padding-left: 1.5rem !important; }
+  .parallax { display: none !important; }
+}
+
+/* ============================================================
+   EDUCATION CARDS — IMAGE PADDING FIX
+   ============================================================ */
+
+@media (max-width: 640px) {
+  /* Ensure the education image cards have proper border-radius */
+  .cards-row img { border-radius: 12px !important; }
+  /* Tighten the education label spacing */
+  .edu-section-label { margin: 1.75rem 0 1rem !important; font-size: 0.68rem !important; }
+}
+
+/* ============================================================
+   NAVBAR — MOBILE ENHANCEMENTS
+   ============================================================ */
+
+@media (max-width: 640px) {
+  /* Make mobile menu links larger and easier to tap */
+  .mobile-menu a {
+    font-size: 1rem !important;
+    padding: 0.9rem 0 !important;
+    min-height: 52px;
+    border-bottom: 1px solid rgba(232,0,122,0.1) !important;
+  }
+  /* Make the Resume link in mobile menu stand out */
+  .mobile-menu a[download] {
+    margin-top: 0.75rem;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+  }
+}
+
+/* ============================================================
+   CONTACT SECTION — GRID BORDER FIX ON MOBILE
+   Single column: remove right border from all items
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .c-items { border-radius: 12px !important; }
+  .c-item { border-right: none !important; }
+  .c-item:last-child { border-bottom: none !important; }
+}
+
+/* ============================================================
+   PROJECT CARDS — MOBILE READING FIXES
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .pcard-title { font-size: 1.1rem !important; line-height: 1.3 !important; word-break: normal !important; overflow-wrap: break-word !important; }
+  .pcard-desc { font-size: 0.82rem !important; line-height: 1.65 !important; }
+  .pcard-cat { font-size: 0.68rem !important; }
+  .pcard-actions { gap: 0.6rem !important; }
+  .pcard-actions a { font-size: 0.78rem !important; padding: 0.5rem 0.9rem !important; min-height: 40px !important; display: flex !important; align-items: center !important; }
+}
+
+/* ============================================================
+   AWARDS SECTION — MOBILE POLISH
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .award-card { padding: 1.1rem 1rem !important; }
+  .award-title { font-size: 0.88rem !important; line-height: 1.35 !important; }
+  .card-subtitle { font-size: 0.72rem !important; }
+}
+
+/* ============================================================
+   RESEARCH SECTION — MOBILE READABILITY
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .res-card h3 { font-size: 0.9rem !important; line-height: 1.4 !important; word-break: normal !important; overflow-wrap: break-word !important; }
+  .res-card p { font-size: 0.82rem !important; line-height: 1.65 !important; }
+}
+
+/* ============================================================
+   SCROLL PROGRESS + MOBILE MENU — POLISH
+   ============================================================ */
+
+/* Ensure scroll progress bar renders above everything */
+#scroll-progress { z-index: 9999 !important; }
+
+/* Mobile menu overlay: tighten for small screens */
+@media (max-width: 360px) {
+  .mobile-menu { width: 100% !important; }
+}
