@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lohitha Sai Priya Ratakonda &mdash; Software Engineer | AI &amp; ML</title>
+  <meta name="description" content="Software Engineer specializing in AI, Machine Learning, and Full-Stack Development. Published Researcher. MS Computer Science at Bowling Green State University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#home" class="nav-logo">
+      <span class="nav-logo-badge">LR</span>
+      Lohitha R.
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#awards">Awards</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+      <a href="images/Lohitha__Ratakonda__Resume.pdf" download class="nav-resume">Resume</a>
+    </div>
+    <button class="hamburger" id="hbg" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mob">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#awards">Awards</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+    <a href="images/Lohitha__Ratakonda__Resume.pdf" download style="color:var(--cyan);font-weight:700;">&#8595; Resume</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-particles" id="heroParticles"></div>
+
+    <div class="hero-inner">
+
+      <!-- LEFT — text content -->
+      <div class="hero-left">
+
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Available for Full-time Opportunities
+        </div>
+
+        <p class="hero-greeting">Hi, I'm</p>
+
+        <h1 class="hero-name">
+          LOHITHA SAI PRIYA<br>
+          <span>RATAKONDA</span>
+        </h1>
+
+        <div class="hero-role-tags">
+          <span class="hero-role-tag">AI Engineer</span>
+          <span class="hero-role-tag">Full Stack Developer</span>
+          <span class="hero-role-tag">Researcher</span>
+          <span class="hero-role-tag">Cloud Practitioner</span>
+        </div>
+
+        <p class="hero-bio">I build intelligent systems at the intersection of AI, cloud computing, and software engineering. MS in Computer Science at Bowling Green State University &mdash; GPA 3.87.</p>
+
+        <p class="hero-role"></p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn-pill-solid">Let&rsquo;s Connect &rarr;</a>
+          <a href="images/Lohitha__Ratakonda__Resume.pdf" download class="btn-pill-outline">&#8595;&nbsp; Resume</a>
+        </div>
+
+        <div class="hero-social">
+          <a href="https://www.linkedin.com/in/lohitha-ratakonda" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="hero-social-link" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:lohitharatakonda.179@gmail.com" class="hero-social-link" aria-label="Email">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+
+      </div><!-- /hero-left -->
+
+      <!-- RIGHT — PNG pop-out from circle -->
+      <div class="hero-right">
+        <div class="hero-photo-ring">
+
+          <!-- SVG background: hex grid + neural net + particles -->
+          <svg class="hero-ai-canvas" viewBox="0 0 420 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1e6fff"/>
+                <stop offset="100%" stop-color="#00c2ff"/>
+              </linearGradient>
+              <pattern id="hexbg" x="0" y="0" width="36" height="41.5" patternUnits="userSpaceOnUse">
+                <polygon points="18,1 34,10 34,28 18,37 2,28 2,10" fill="none" stroke="rgba(200,80,255,0.08)" stroke-width="0.7"/>
+              </pattern>
+              <radialGradient id="cglow" cx="50%" cy="70%" r="50%">
+                <stop offset="0%"   stop-color="rgba(30,111,255,0.22)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+              <filter id="fg" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Hex grid -->
+            <rect width="420" height="540" fill="url(#hexbg)" opacity="0.9"/>
+            <!-- Center radial glow behind circle -->
+            <ellipse cx="210" cy="390" rx="195" ry="175" fill="url(#cglow)"/>
+            <!-- Neural net — left -->
+            <circle cx="22" cy="200" r="4.5" fill="none" stroke="#00c2ff" stroke-width="1.2" filter="url(#fg)"><animate attributeName="r" values="4.5;6.5;4.5" dur="3s" repeatCount="indefinite"/></circle>
+            <circle cx="22" cy="255" r="4"   fill="none" stroke="#1e6fff" stroke-width="1"><animate attributeName="r" values="4;6;4" dur="2.7s" repeatCount="indefinite"/></circle>
+            <circle cx="22" cy="310" r="4.5" fill="none" stroke="#7c3aed" stroke-width="1"><animate attributeName="r" values="4.5;6.5;4.5" dur="3.6s" repeatCount="indefinite"/></circle>
+            <circle cx="62" cy="225" r="4"   fill="none" stroke="#00c2ff" stroke-width="1"><animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/></circle>
+            <circle cx="62" cy="280" r="3.5" fill="none" stroke="#1e6fff" stroke-width="1"><animate attributeName="r" values="3.5;5.5;3.5" dur="3.1s" repeatCount="indefinite"/></circle>
+            <circle cx="96" cy="250" r="5"   fill="rgba(0,194,255,0.12)" stroke="#00c2ff" stroke-width="1.2" filter="url(#fg)"><animate attributeName="r" values="5;7.5;5" dur="4s" repeatCount="indefinite"/></circle>
+            <line x1="22" y1="200" x2="62" y2="225" stroke="rgba(0,194,255,0.32)"  stroke-width="0.8"/>
+            <line x1="22" y1="255" x2="62" y2="225" stroke="rgba(30,111,255,0.32)" stroke-width="0.8"/>
+            <line x1="22" y1="255" x2="62" y2="280" stroke="rgba(30,111,255,0.28)" stroke-width="0.7"/>
+            <line x1="22" y1="310" x2="62" y2="280" stroke="rgba(124,58,237,0.32)" stroke-width="0.8"/>
+            <line x1="62" y1="225" x2="96" y2="250" stroke="rgba(0,194,255,0.4)"   stroke-width="0.9"/>
+            <line x1="62" y1="280" x2="96" y2="250" stroke="rgba(30,111,255,0.4)"  stroke-width="0.9"/>
+            <!-- Data pulses -->
+            <circle r="2.5" fill="#00c2ff" filter="url(#fg)"><animateMotion dur="2.1s" repeatCount="indefinite" path="M22,200 L62,225 L96,250"/></circle>
+            <circle r="2"   fill="#7c3aed" filter="url(#fg)"><animateMotion dur="3s"   repeatCount="indefinite" path="M22,310 L62,280 L96,250"/></circle>
+            <!-- Circuit traces — bottom -->
+            <path d="M60,510 L80,490 L120,490 L145,468" stroke="rgba(0,194,255,0.4)"  stroke-width="0.9" fill="none"/>
+            <path d="M360,510 L340,490 L300,490 L275,468" stroke="rgba(30,111,255,0.4)" stroke-width="0.9" fill="none"/>
+            <circle cx="80"  cy="490" r="2.5" fill="#00c2ff"><animate attributeName="opacity" values="1;0.2;1" dur="2s"   repeatCount="indefinite"/></circle>
+            <circle cx="340" cy="490" r="2.5" fill="#1e6fff"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+            <!-- Floating particles -->
+            <circle cx="130" cy="55"  r="2"   fill="#00c2ff" opacity="0.7"><animate attributeName="cy" values="55;42;55"    dur="4s"   repeatCount="indefinite"/></circle>
+            <circle cx="370" cy="130" r="1.8" fill="#1e6fff" opacity="0.6"><animate attributeName="cy" values="130;118;130"  dur="3.5s" repeatCount="indefinite"/></circle>
+            <circle cx="395" cy="290" r="2"   fill="#7c3aed" opacity="0.5"><animate attributeName="cy" values="290;276;290"  dur="5.2s" repeatCount="indefinite"/></circle>
+            <circle cx="14"  cy="380" r="1.5" fill="#00c2ff" opacity="0.5"><animate attributeName="cy" values="380;366;380"  dur="4.8s" repeatCount="indefinite"/></circle>
+          </svg>
+
+          <!-- The glowing circle ring (person pops above this) -->
+          <div class="hero-circle-ring"></div>
+
+          <!-- Scanning line inside the circle -->
+
+          <!-- PNG with transparent background — pops OUT above the circle -->
+          <div class="hero-photo-inner">
+            <img src="images/lohitha_png.png"
+                 alt="Lohitha Sai Priya Ratakonda"
+                 onerror="this.src='images/photo3.jpeg'">
+          </div>
+
+          <!-- Floating AI stat cards -->
+          <div class="hero-ai-card hero-ai-card--1">
+            <div class="hero-ai-card-header">
+              <span class="hero-ai-card-dot"></span>
+              <span class="hero-ai-card-title">Model Accuracy</span>
+            </div>
+            <div class="hero-ai-card-val">97.37%</div>
+            <div class="hero-ai-bar">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="hero-ai-card hero-ai-card--2">
+            <div class="hero-ai-card-header">
+              <span class="hero-ai-card-dot" style="background:var(--cyan);box-shadow:0 0 8px var(--cyan)"></span>
+              <span class="hero-ai-card-title">GPA Score</span>
+            </div>
+            <div class="hero-ai-card-val">3.87 <span style="font-size:0.68rem;-webkit-text-fill-color:var(--text-3);background:none">/ 4.0</span></div>
+            <div class="hero-ai-card-sub">Bowling Green State Univ.</div>
+          </div>
+
+          <div class="hero-ai-card hero-ai-card--3">
+            <div class="hero-ai-card-header">
+              <span class="hero-ai-card-dot" style="background:var(--accent);box-shadow:0 0 8px var(--accent)"></span>
+              <span class="hero-ai-card-title">Cloud Certified</span>
+            </div>
+            <div class="hero-ai-card-val">3+</div>
+            <div class="hero-ai-card-sub">AWS &middot; GCP &middot; Azure</div>
+          </div>
+
+          <!-- Available badge -->
+          <div class="hero-avail-badge">
+            <span class="hero-badge-dot"></span>
+            Available for Opportunities
+          </div>
+
+        </div>
+      </div><!-- /hero-right -->
+
+    </div><!-- /hero-inner -->
+
+    <!-- STATS STRIP -->
+    <div class="hero-stats-strip">
+      <div class="hero-stats-grid">
+        <div class="hero-stat">
+          <div class="hero-stat-num">3.87</div>
+          <div class="hero-stat-lbl">GPA / 4.0</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-lbl">Cloud Certifications</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">9+</div>
+          <div class="hero-stat-lbl">Projects Built</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">1</div>
+          <div class="hero-stat-lbl">Research Publication</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">5+</div>
+          <div class="hero-stat-lbl">Programming Languages</div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-circle-tr"></div>
+    <div class="about-circle-tr2"></div>
+    <div class="inner">
+
+      <div class="about-heading-wrap">
+        <h2 class="about-heading-script reveal-up">About Me</h2>
+        <div class="about-sub-line reveal-up">
+          <span class="about-line"></span>
+          Who I am
+          <span class="about-line"></span>
+        </div>
+      </div>
+
+      <div class="bio-row">
+        <div class="bio-photo reveal-left">
+          <img src="images/photo2.jpeg" alt="Lohitha Sai Priya Ratakonda" onerror="this.src='images/photo3.jpeg'">
+        </div>
+        <div class="bio-content reveal-right">
+          <p class="bio-text">Hey! I'm Lohitha Sai Priya Ratakonda, a Software Engineer with a strong background in Artificial Intelligence &amp; Machine Learning, full-stack development, and published research.</p>
+          <p class="bio-text" style="margin-top:1rem">I have worked across telecom, fintech, and data science domains, building intelligent systems &mdash; from fraud detection platforms and graph neural networks to conversational AI and cloud-native applications. I bring both engineering depth and research curiosity to every project.</p>
+          <p class="bio-text" style="margin-top:1rem">Outside of work, I love exploring new technologies and am always working on something new. I prefer to keep learning, continue challenging myself, and do things that matter.</p>
+          <div class="bio-tags" style="margin-top:1.4rem">
+            <span class="tag hi">Python</span>
+            <span class="tag hi">PyTorch</span>
+            <span class="tag hi">TensorFlow</span>
+            <span class="tag hi">Spring Boot</span>
+            <span class="tag hi">AWS</span>
+            <span class="tag hi">LangChain</span>
+          </div>
+          <a href="images/Lohitha__Ratakonda__Resume.pdf" download class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex">Download Resume</a>
+        </div>
+      </div>
+
+      <div class="edu-section-label reveal-up">Education &amp; Certifications</div>
+
+      <div class="cards-row" style="align-items:stretch;margin-left:-3.5rem;margin-right:-3.5rem;gap:1.5rem;">
+        <div class="reveal" style="overflow:hidden;border-radius:20px;">
+          <img src="images/EDU_1.png" alt="Master of Science, Computer Science – Bowling Green State University" style="width:100%;height:auto;display:block;border-radius:20px;transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);cursor:zoom-in;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div class="reveal" style="overflow:hidden;border-radius:20px;">
+          <img src="images/EDU_2.png" alt="Bachelor of Engineering, Computer Science – RMK College" style="width:100%;height:auto;display:block;border-radius:20px;transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);cursor:zoom-in;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div class="reveal" style="overflow:hidden;border-radius:20px;">
+          <img src="images/EDU_3.png" alt="Cloud Certifications" style="width:100%;height:auto;display:block;border-radius:20px;transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);cursor:zoom-in;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="inner skills-inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Technical Skills</div>
+        <h2 class="s-title">What I Work With</h2>
+      </div>
+      <!-- TECH STACK OVERVIEW STRIP -->
+      <div class="techstack-strip">
+        <div class="techstack-inner">
+          <div class="techstack-label">
+            <span class="techstack-accent"></span>
+            TECH STACK OVERVIEW
+          </div>
+          <div class="techstack-items">
+
+            <!-- AI / ML -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c1">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="24" cy="24" r="3.5" fill="currentColor" opacity="0.6"/>
+                  <circle cx="24" cy="5"  r="3" fill="currentColor"/>
+                  <circle cx="43" cy="24" r="3" fill="currentColor"/>
+                  <circle cx="24" cy="43" r="3" fill="currentColor"/>
+                  <circle cx="5"  cy="24" r="3" fill="currentColor"/>
+                  <line x1="24" y1="8"  x2="24" y2="15" stroke="currentColor" stroke-width="1.8"/>
+                  <line x1="40" y1="24" x2="33" y2="24" stroke="currentColor" stroke-width="1.8"/>
+                  <line x1="24" y1="40" x2="24" y2="33" stroke="currentColor" stroke-width="1.8"/>
+                  <line x1="8"  y1="24" x2="15" y2="24" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M10 10 L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M38 10 L31 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M38 38 L31 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M10 38 L17 31" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">AI / ML</div>
+            </div>
+
+            <div class="tsi-connector">
+              <span></span><span></span><span></span>
+              <span class="tsi-diamond"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <!-- Cloud -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c2">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 30 Q7 30 7 25 Q7 19 13 18 Q13 11 20 10 Q27 9 30 15 Q35 15 37 19 Q41 20 41 25 Q41 30 36 30 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  <line x1="17" y1="30" x2="17" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="24" y1="30" x2="24" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="31" y1="30" x2="31" y2="40" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="17" cy="42" r="2.5" fill="currentColor"/>
+                  <circle cx="24" cy="42" r="2.5" fill="currentColor"/>
+                  <circle cx="31" cy="42" r="2.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">Cloud</div>
+            </div>
+
+            <div class="tsi-connector">
+              <span></span><span></span><span></span>
+              <span class="tsi-diamond"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <!-- DevOps -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c3">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="1.8" stroke-dasharray="4 3"/>
+                  <rect x="15" y="17" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M20 24 L22 27 L28 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">DevOps</div>
+            </div>
+
+            <div class="tsi-connector">
+              <span></span><span></span><span></span>
+              <span class="tsi-diamond"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <!-- Backend -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="7"  y="9"  width="34" height="10" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                  <rect x="7"  y="24" width="34" height="10" rx="3" stroke="currentColor" stroke-width="1.8"/>
+                  <circle cx="13" cy="14" r="2.5" fill="currentColor"/>
+                  <circle cx="13" cy="29" r="2.5" fill="currentColor"/>
+                  <line x1="20" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="20" y1="29" x2="34" y2="29" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="12" y1="39" x2="36" y2="39" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 3"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">Backend</div>
+            </div>
+
+            <div class="tsi-connector">
+              <span></span><span></span><span></span>
+              <span class="tsi-diamond"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <!-- Frontend -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c5">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="8" width="40" height="28" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                  <line x1="4" y1="17" x2="44" y2="17" stroke="currentColor" stroke-width="1.4"/>
+                  <circle cx="10" cy="12.5" r="2" fill="currentColor" opacity="0.7"/>
+                  <circle cx="17" cy="12.5" r="2" fill="currentColor" opacity="0.7"/>
+                  <circle cx="24" cy="12.5" r="2" fill="currentColor" opacity="0.7"/>
+                  <path d="M14 28 L19 23 L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="23" y1="28" x2="33" y2="28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="18" y1="40" x2="30" y2="40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="24" y1="36" x2="24" y2="40" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">Frontend</div>
+            </div>
+
+            <div class="tsi-connector">
+              <span></span><span></span><span></span>
+              <span class="tsi-diamond"></span>
+              <span></span><span></span><span></span>
+            </div>
+
+            <!-- Databases -->
+            <div class="tsi">
+              <div class="tsi-icon tsi-c6">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="24" cy="13" rx="15" ry="6" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M9 13 L9 35 Q9 41 24 41 Q39 41 39 35 L39 13" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M9 24 Q9 30 24 30 Q39 30 39 24" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <div class="tsi-lbl">Databases</div>
+            </div>
+
+          </div><!-- /techstack-items -->
+        </div><!-- /techstack-inner -->
+      </div><!-- /techstack-strip -->
+
+      <div class="skills-grid">
+
+        <div class="card reveal">
+          <div class="card-label">Languages</div>
+          <div class="tags">
+            <span class="tag hi">Python</span><span class="tag hi">Java</span>
+            <span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+            <span class="tag">SQL</span><span class="tag">C</span><span class="tag">C++</span>
+            <span class="tag">R</span><span class="tag">Bash</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-label">AI &amp; Machine Learning</div>
+          <div class="tags">
+            <span class="tag hi">PyTorch</span><span class="tag hi">TensorFlow</span>
+            <span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
+            <span class="tag">CNN</span><span class="tag">GNN</span>
+            <span class="tag">Transfer Learning</span><span class="tag">NLP</span>
+            <span class="tag">OpenCV</span><span class="tag">Deep Learning</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-label">GenAI &amp; Agentic AI</div>
+          <div class="tags">
+            <span class="tag hi">LangChain</span><span class="tag hi">RAG</span>
+            <span class="tag">FAISS</span><span class="tag">Vector Databases</span>
+            <span class="tag">OpenAI API</span><span class="tag">Agentic Workflows</span>
+            <span class="tag">LLM Orchestration</span><span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-label">Backend &amp; APIs</div>
+          <div class="tags">
+            <span class="tag hi">Spring Boot</span><span class="tag hi">REST APIs</span>
+            <span class="tag">FastAPI</span><span class="tag">Node.js</span>
+            <span class="tag">Microservices</span><span class="tag">MySQL</span>
+            <span class="tag">JWT Auth</span><span class="tag">Wi-Fi / Networking</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-label">Cloud &amp; DevOps</div>
+          <div class="tags">
+            <span class="tag hi">AWS (Certified)</span><span class="tag hi">GCP (Certified)</span>
+            <span class="tag hi">Azure (Certified)</span><span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span><span class="tag">CI/CD</span>
+            <span class="tag">Git</span><span class="tag">Jenkins</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-label">Frontend &amp; Databases</div>
+          <div class="tags">
+            <span class="tag">React.js</span><span class="tag">Redux</span>
+            <span class="tag">Java AWT</span><span class="tag">HTML5</span>
+            <span class="tag">CSS3</span><span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span><span class="tag">QuickBase</span>
+            <span class="tag">Oracle SQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Work History</div>
+        <h2 class="s-title">Experience Journey</h2>
+      </div>
+
+      <div class="exp-list">
+
+        <div class="card exp-card reveal" style="position:relative;overflow:hidden;padding:2.5rem 2.5rem 2.5rem 5rem;min-height:260px;">
+          <!-- background image pinned to right half only -->
+          <img src="images/EXP_1.png" alt="" aria-hidden="true" style="position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;object-position:center;opacity:0.75;pointer-events:none;mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);border-radius:0;z-index:0;">
+          <!-- strong glass only on left text area -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.1) 100%);z-index:1;border-radius:inherit;pointer-events:none;"></div>
+          <!-- content -->
+          <div class="exp-head" style="position:relative;z-index:2;">
+            <div class="exp-head-left">
+              <div class="exp-logo-wrap exp-logo--senecio">
+                <span>SEN<br>ECIO</span>
+              </div>
+              <div>
+                <div class="exp-role" style="font-size:1.65rem;font-weight:800;">Software Engineering Intern</div>
+                <div class="exp-co" style="font-size:1.1rem;font-weight:600;">Senecio Corporation &nbsp;&middot;&nbsp; Bowling Green, OH</div>
+              </div>
+            </div>
+            <div class="exp-date" style="font-size:0.9rem;font-weight:700;background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(232,0,122,0.35);box-shadow:0 2px 12px rgba(232,0,122,0.15);color:#e8007a;">Sep 2025 &ndash; Dec 2025</div>
+          </div>
+          <ul class="exp-bullets" style="position:relative;z-index:2;font-size:1.05rem;line-height:1.85;">
+            <li>Contributed to building a community mobile app using <strong>JavaScript, Java, and SQL</strong> &mdash; the app lets users in a geographic area discover local events, post listings, sell items, and connect with nearby people within a set mile radius</li>
+            <li>Built an <strong>in-app voting and rating system</strong> allowing users to vote and rate restaurants, venues, and community events &mdash; implemented voting logic, data persistence, and live result updates</li>
+            <li>Worked across the <strong>full stack</strong> &mdash; from database schema design and <strong>REST API development</strong> to frontend components and app features using modern JavaScript frameworks</li>
+            <li>Used <strong>AI tools</strong> to assist with code generation, debugging, and feature ideation throughout the development process</li>
+            <li>Reported directly to <strong>Dr. Jerry W. Wicks</strong>, President of Senecio Corporation</li>
+          </ul>
+        </div>
+
+        <div class="card exp-card reveal" style="position:relative;overflow:hidden;padding:2.5rem 2.5rem 2.5rem 5rem;min-height:260px;">
+          <!-- background image pinned to right half only -->
+          <img src="images/EXP_2.png" alt="" aria-hidden="true" style="position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;object-position:center;opacity:0.75;pointer-events:none;mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);border-radius:0;z-index:0;">
+          <!-- strong glass fade on left text area -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.1) 100%);z-index:1;border-radius:inherit;pointer-events:none;"></div>
+          <!-- content -->
+          <div class="exp-head" style="position:relative;z-index:2;">
+            <div class="exp-head-left">
+              <div class="exp-logo-wrap">
+                <img src="images/BGSU_img.png" alt="BGSU">
+              </div>
+              <div>
+                <div class="exp-role" style="font-size:1.65rem;font-weight:800;">Graduate Teaching Assistant</div>
+                <div class="exp-co" style="font-size:1.1rem;font-weight:600;">Bowling Green State University &nbsp;&middot;&nbsp; Bowling Green, OH</div>
+              </div>
+            </div>
+            <div class="exp-date" style="font-size:0.9rem;font-weight:700;background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(232,0,122,0.35);box-shadow:0 2px 12px rgba(232,0,122,0.15);color:#e8007a;">Aug 2024 &ndash; May 2026</div>
+          </div>
+          <ul class="exp-bullets" style="position:relative;z-index:2;font-size:1.05rem;line-height:1.85;">
+            <li>Assisted students in courses covering <strong>Computer Organization</strong>, <strong>Python programming</strong>, and system design concepts</li>
+            <li>Held office hours and led doubt-clearing sessions &mdash; helped <strong>50+ students</strong> understand hardware fundamentals, programming logic, and software architecture</li>
+            <li>Graded assignments, projects, and exams; provided <strong>structured feedback</strong> to help students improve</li>
+          </ul>
+        </div>
+
+        <div class="card exp-card reveal" style="position:relative;overflow:hidden;padding:2.5rem 2.5rem 2.5rem 5rem;min-height:260px;">
+          <!-- background image pinned to right half only -->
+          <img src="images/EXP_3.png" alt="" aria-hidden="true" style="position:absolute;right:0;top:0;width:48%;height:100%;object-fit:cover;object-position:center;opacity:0.75;pointer-events:none;mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0) 100%);border-radius:0;z-index:0;">
+          <!-- strong glass fade on left text area -->
+          <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.1) 100%);z-index:1;border-radius:inherit;pointer-events:none;"></div>
+          <!-- content -->
+          <div class="exp-head" style="position:relative;z-index:2;">
+            <div class="exp-head-left">
+              <div class="exp-logo-wrap exp-logo--cdot">
+                <span>C-DOT<br>Govt.<br>India</span>
+              </div>
+              <div>
+                <div class="exp-role" style="font-size:1.65rem;font-weight:800;">Software Engineering Intern</div>
+                <div class="exp-co" style="font-size:1.1rem;font-weight:600;">C-DOT (Centre for Development of Telematics) &mdash; Govt. of India &nbsp;&middot;&nbsp; Bengaluru, India</div>
+              </div>
+            </div>
+            <div class="exp-date" style="font-size:0.9rem;font-weight:700;background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(232,0,122,0.35);box-shadow:0 2px 12px rgba(232,0,122,0.15);color:#e8007a;">Jul 2023 &ndash; Sep 2023</div>
+          </div>
+          <ul class="exp-bullets" style="position:relative;z-index:2;font-size:1.05rem;line-height:1.85;">
+            <li>Worked on the development of <strong>data path management software</strong> for an Open Wi-Fi Access Controller &mdash; a research-grade <strong>5G/6G wireless networking</strong> project under the Government of India's telecom R&amp;D lab</li>
+            <li>Built a <strong>MySQL database and GUI</strong> for user authentication &mdash; login, signup, role-based access (admin/user), and user management APIs (add, delete, modify)</li>
+            <li>Developed <strong>REST APIs</strong> for Access Point management including add, delete, modify, and bulk delete operations; implemented <strong>VLAN interface</strong> additions to bridges and auto-add bridge on system bootup</li>
+            <li>Studied <strong>Wi-Fi protocols 802.11a/b/g/n/ac/ax</strong>, channel configuration, security methods (WPA1/2/3, Enterprise), and OpenWiFi Access Controller architecture</li>
+            <li>Presented a <strong>live demo</strong> to the WAC team and submitted the project report on September 13, 2023</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARALLAX -->
+  <div class="parallax" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80')"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Featured Projects</div>
+        <h2 class="s-title">What I've Built</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="proj-filters reveal">
+        <button class="proj-filter active" data-filter="all">All</button>
+        <button class="proj-filter" data-filter="ai-ml">AI / ML</button>
+        <button class="proj-filter" data-filter="fullstack">Full Stack</button>
+        <button class="proj-filter" data-filter="research">Research</button>
+        <button class="proj-filter" data-filter="data">Data Science</button>
+      </div>
+
+      <div class="proj-list">
+
+        <!-- Card 1: Fraud Detection -->
+        <div class="pcard reveal" data-cat="ai-ml">
+          <div class="pcard-left">
+            <div class="pcard-cat">AI / ML &nbsp;&bull;&nbsp; Fintech</div>
+            <h3 class="pcard-title">AI-Powered Fraud Detection &amp; Virtual Wallet</h3>
+            <p class="pcard-desc">AI-powered virtual wallet that detects fraudulent transactions in real time using XGBoost and ensemble classifiers. Analyzes spending patterns and flags anomalies across 100K+ transactions.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda/AI-Powered-Fraud-Detection-Virtual-Wallet" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda/AI-Powered-Fraud-Detection-Virtual-Wallet" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--fraud">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="f1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(30,111,255,0.25)"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+                  <filter id="gf1"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <ellipse cx="110" cy="90" rx="90" ry="80" fill="url(#f1)"/>
+                <!-- Shield -->
+                <path d="M110,30 L145,45 L145,80 Q145,110 110,125 Q75,110 75,80 L75,45 Z" fill="rgba(30,111,255,0.12)" stroke="#1e6fff" stroke-width="1.5" filter="url(#gf1)"/>
+                <path d="M110,45 L132,56 L132,80 Q132,100 110,110 Q88,100 88,80 L88,56 Z" fill="rgba(0,194,255,0.08)" stroke="#00c2ff" stroke-width="1"/>
+                <!-- Lock -->
+                <rect x="101" y="75" width="18" height="15" rx="3" fill="rgba(30,111,255,0.3)" stroke="#1e6fff" stroke-width="1"/>
+                <path d="M105,75 L105,70 Q105,64 110,64 Q115,64 115,70 L115,75" fill="none" stroke="#00c2ff" stroke-width="1.5"/>
+                <circle cx="110" cy="82" r="2" fill="#00c2ff"/>
+                <!-- Circuit lines -->
+                <line x1="50" y1="40" x2="75" y2="55" stroke="rgba(0,194,255,0.35)" stroke-width="0.8"/>
+                <line x1="35" y1="60" x2="75" y2="65" stroke="rgba(30,111,255,0.3)" stroke-width="0.8"/>
+                <line x1="145" y1="55" x2="175" y2="45" stroke="rgba(0,194,255,0.35)" stroke-width="0.8"/>
+                <line x1="145" y1="75" x2="180" y2="70" stroke="rgba(30,111,255,0.3)" stroke-width="0.8"/>
+                <circle cx="50" cy="40" r="3" fill="none" stroke="#00c2ff" stroke-width="1"><animate attributeName="r" values="3;5;3" dur="2.5s" repeatCount="indefinite"/></circle>
+                <circle cx="35" cy="60" r="2.5" fill="none" stroke="#1e6fff" stroke-width="1"><animate attributeName="r" values="2.5;4;2.5" dur="3s" repeatCount="indefinite"/></circle>
+                <circle cx="175" cy="45" r="3" fill="none" stroke="#00c2ff" stroke-width="1"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/></circle>
+                <circle cx="180" cy="70" r="2.5" fill="none" stroke="#7c3aed" stroke-width="1"><animate attributeName="r" values="2.5;4;2.5" dur="3.5s" repeatCount="indefinite"/></circle>
+                <!-- Scan sweep -->
+                <line x1="75" y1="90" x2="145" y2="90" stroke="rgba(0,194,255,0.4)" stroke-width="1" stroke-dasharray="3,3"><animate attributeName="y1" values="45;125;45" dur="3s" repeatCount="indefinite"/><animate attributeName="y2" values="45;125;45" dur="3s" repeatCount="indefinite"/></line>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">98.2%</div><div class="pcard-stat-lbl">Accuracy</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">31%</div><div class="pcard-stat-lbl">False Positives&nbsp;&#8595;</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: GNN -->
+        <div class="pcard reveal" data-cat="ai-ml">
+          <div class="pcard-left">
+            <div class="pcard-cat">Graph AI &nbsp;&bull;&nbsp; PyTorch</div>
+            <h3 class="pcard-title">GNN &mdash; Large-Scale Graph Classification</h3>
+            <p class="pcard-desc">GNN classification system using GCN and GIN architectures achieving 97.37% accuracy on datasets with 4M+ nodes. Distributed graph traversal across 3M+ edges with ArangoDB backend.</p>
+            <div class="pcard-tags">
+              <span class="tag">PyTorch</span><span class="tag">GCN</span><span class="tag">GIN</span><span class="tag">Python</span><span class="tag">ArangoDB</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/harikan19/CS6010_Project3" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/harikan19/CS6010_Project3" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--gnn">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="f2" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="rgba(124,58,237,0.25)"/><stop offset="100%" stop-color="transparent"/></radialGradient><filter id="gf2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <ellipse cx="110" cy="90" rx="95" ry="80" fill="url(#f2)"/>
+                <!-- Network nodes -->
+                <circle cx="110" cy="90" r="10" fill="rgba(124,58,237,0.25)" stroke="#7c3aed" stroke-width="1.5" filter="url(#gf2)"><animate attributeName="r" values="10;13;10" dur="3s" repeatCount="indefinite"/></circle>
+                <circle cx="60"  cy="55"  r="7" fill="rgba(30,111,255,0.2)"  stroke="#1e6fff" stroke-width="1.2"><animate attributeName="r" values="7;9;7"   dur="2.5s" repeatCount="indefinite"/></circle>
+                <circle cx="160" cy="55"  r="6" fill="rgba(0,194,255,0.2)"   stroke="#00c2ff" stroke-width="1.2"><animate attributeName="r" values="6;8;6"   dur="3.2s" repeatCount="indefinite"/></circle>
+                <circle cx="45"  cy="110" r="5" fill="rgba(124,58,237,0.2)"  stroke="#7c3aed" stroke-width="1"><animate attributeName="r" values="5;7;5"     dur="2.8s" repeatCount="indefinite"/></circle>
+                <circle cx="175" cy="110" r="6" fill="rgba(30,111,255,0.2)"  stroke="#1e6fff" stroke-width="1.2"><animate attributeName="r" values="6;8;6"   dur="3.5s" repeatCount="indefinite"/></circle>
+                <circle cx="85"  cy="145" r="5" fill="rgba(0,194,255,0.2)"   stroke="#00c2ff" stroke-width="1"><animate attributeName="r" values="5;7;5"     dur="2.2s" repeatCount="indefinite"/></circle>
+                <circle cx="140" cy="145" r="5" fill="rgba(124,58,237,0.2)"  stroke="#7c3aed" stroke-width="1"><animate attributeName="r" values="5;7;5"     dur="3s"   repeatCount="indefinite"/></circle>
+                <!-- Edges -->
+                <line x1="110" y1="90" x2="60"  y2="55"  stroke="rgba(124,58,237,0.4)" stroke-width="1"/>
+                <line x1="110" y1="90" x2="160" y2="55"  stroke="rgba(30,111,255,0.4)" stroke-width="1"/>
+                <line x1="110" y1="90" x2="45"  y2="110" stroke="rgba(0,194,255,0.35)" stroke-width="1"/>
+                <line x1="110" y1="90" x2="175" y2="110" stroke="rgba(124,58,237,0.35)" stroke-width="1"/>
+                <line x1="110" y1="90" x2="85"  y2="145" stroke="rgba(30,111,255,0.35)" stroke-width="1"/>
+                <line x1="110" y1="90" x2="140" y2="145" stroke="rgba(0,194,255,0.35)" stroke-width="1"/>
+                <line x1="60"  y1="55" x2="45"  y2="110" stroke="rgba(30,111,255,0.2)" stroke-width="0.7"/>
+                <line x1="160" y1="55" x2="175" y2="110" stroke="rgba(0,194,255,0.2)"  stroke-width="0.7"/>
+                <!-- Pulses -->
+                <circle r="3" fill="#7c3aed" filter="url(#gf2)"><animateMotion dur="2s"   repeatCount="indefinite" path="M110,90 L60,55"/></circle>
+                <circle r="3" fill="#00c2ff" filter="url(#gf2)"><animateMotion dur="2.5s" repeatCount="indefinite" path="M110,90 L175,110"/></circle>
+                <circle r="2.5" fill="#1e6fff" filter="url(#gf2)"><animateMotion dur="3s" repeatCount="indefinite" path="M110,90 L140,145"/></circle>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">97.37%</div><div class="pcard-stat-lbl">Accuracy</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">4M+</div><div class="pcard-stat-lbl">Nodes</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Pneumonia Detection -->
+        <div class="pcard reveal" data-cat="ai-ml research">
+          <div class="pcard-left">
+            <div class="pcard-cat">Medical AI &nbsp;&bull;&nbsp; Deep Learning &nbsp;&bull;&nbsp; <span style="color:var(--cyan)">Published</span></div>
+            <h3 class="pcard-title">Pneumonia Detection from Chest X-Rays</h3>
+            <p class="pcard-desc">CAD system using CNNs and VGG16 transfer learning to classify pneumonia from 5,800+ chest X-ray images. Evaluated using precision-recall curves and ROC-AUC analysis. Published in IJRAR 2024.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">CNN</span><span class="tag">VGG16</span><span class="tag">TensorFlow</span><span class="tag">Keras</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda/Pneumonia-Detection-from-Chest-X-Rays" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda/Pneumonia-Detection-from-Chest-X-Rays" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--medical">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="f3" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="rgba(0,194,255,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient><filter id="gf3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <ellipse cx="110" cy="90" rx="90" ry="78" fill="url(#f3)"/>
+                <!-- X-ray frame -->
+                <rect x="45" y="25" width="130" height="140" rx="6" fill="rgba(8,18,42,0.7)" stroke="rgba(30,111,255,0.4)" stroke-width="1"/>
+                <!-- Lung silhouette left -->
+                <path d="M75,65 Q65,75 65,95 Q65,120 80,130 Q90,135 95,120 L95,65 Z" fill="rgba(30,111,255,0.15)" stroke="rgba(30,111,255,0.5)" stroke-width="1"/>
+                <!-- Lung silhouette right -->
+                <path d="M145,65 Q155,75 155,95 Q155,120 140,130 Q130,135 125,120 L125,65 Z" fill="rgba(30,111,255,0.15)" stroke="rgba(30,111,255,0.5)" stroke-width="1"/>
+                <!-- Spine -->
+                <rect x="107" y="60" width="6" height="80" rx="3" fill="rgba(0,194,255,0.2)" stroke="rgba(0,194,255,0.4)" stroke-width="0.8"/>
+                <!-- Scan line -->
+                <line x1="45" y1="90" x2="175" y2="90" stroke="rgba(0,194,255,0.6)" stroke-width="1.2" stroke-dasharray="5,3"><animate attributeName="y1" values="30;160;30" dur="3s" repeatCount="indefinite"/><animate attributeName="y2" values="30;160;30" dur="3s" repeatCount="indefinite"/></line>
+                <!-- AI detection box -->
+                <rect x="60" y="80" width="35" height="28" rx="3" fill="none" stroke="#00c2ff" stroke-width="1" stroke-dasharray="3,2"/>
+                <text x="63" y="92" fill="#00c2ff" font-size="6" font-family="monospace">PNEUMONIA</text>
+                <text x="63" y="102" fill="rgba(0,194,255,0.7)" font-size="5" font-family="monospace">92% CONF</text>
+                <!-- Corner brackets -->
+                <path d="M60,80 L60,84 M60,80 L64,80" stroke="#00c2ff" stroke-width="1.5"/>
+                <path d="M95,80 L95,84 M95,80 L91,80" stroke="#00c2ff" stroke-width="1.5"/>
+                <path d="M60,108 L60,104 M60,108 L64,108" stroke="#00c2ff" stroke-width="1.5"/>
+                <path d="M95,108 L95,104 M95,108 L91,108" stroke="#00c2ff" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">92%</div><div class="pcard-stat-lbl">Accuracy</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">5.8K+</div><div class="pcard-stat-lbl">Images</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: DATAR -->
+        <div class="pcard reveal" data-cat="data ai-ml">
+          <div class="pcard-left">
+            <div class="pcard-cat">Data Science &nbsp;&bull;&nbsp; Analytics</div>
+            <h3 class="pcard-title">DATAR &mdash; Android App Success Prediction</h3>
+            <p class="pcard-desc">Analyzed 7,800+ releases from 1,300+ Android apps using SQL, EDA, and statistical hypothesis testing. Predictive ML models with XGBoost &amp; Random Forest achieving 83.7% accuracy.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">XGBoost</span><span class="tag">Random Forest</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda/DATAR-Android-App-Success-Prediction" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda/DATAR-Android-App-Success-Prediction" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--data">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="f4" cx="50%" cy="70%" r="55%"><stop offset="0%" stop-color="rgba(30,111,255,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+                <ellipse cx="110" cy="110" rx="90" ry="70" fill="url(#f4)"/>
+                <!-- Chart axes -->
+                <line x1="45" y1="30" x2="45" y2="148" stroke="rgba(30,111,255,0.4)" stroke-width="1"/>
+                <line x1="45" y1="148" x2="185" y2="148" stroke="rgba(30,111,255,0.4)" stroke-width="1"/>
+                <!-- Bars -->
+                <rect x="57"  y="108" width="18" height="40" rx="3" fill="rgba(30,111,255,0.6)"><animate attributeName="height" from="0" to="40" dur="1.5s" fill="freeze"/><animate attributeName="y" from="148" to="108" dur="1.5s" fill="freeze"/></rect>
+                <rect x="83"  y="88"  width="18" height="60" rx="3" fill="rgba(30,111,255,0.75)"><animate attributeName="height" from="0" to="60" dur="1.7s" fill="freeze"/><animate attributeName="y" from="148" to="88" dur="1.7s" fill="freeze"/></rect>
+                <rect x="109" y="68"  width="18" height="80" rx="3" fill="url(#lgrad2)"><animate attributeName="height" from="0" to="80" dur="1.9s" fill="freeze"/><animate attributeName="y" from="148" to="68" dur="1.9s" fill="freeze"/></rect>
+                <rect x="135" y="98"  width="18" height="50" rx="3" fill="rgba(0,194,255,0.6)"><animate attributeName="height" from="0" to="50" dur="1.6s" fill="freeze"/><animate attributeName="y" from="148" to="98" dur="1.6s" fill="freeze"/></rect>
+                <rect x="161" y="78"  width="18" height="70" rx="3" fill="rgba(124,58,237,0.6)"><animate attributeName="height" from="0" to="70" dur="2s" fill="freeze"/><animate attributeName="y" from="148" to="78" dur="2s" fill="freeze"/></rect>
+                <defs><linearGradient id="lgrad2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#00c2ff"/><stop offset="100%" stop-color="#1e6fff"/></linearGradient></defs>
+                <!-- Trend line -->
+                <polyline points="66,108 92,88 118,68 144,98 170,78" fill="none" stroke="rgba(0,194,255,0.7)" stroke-width="1.5" stroke-dasharray="4,3"/>
+                <circle cx="118" cy="68" r="4" fill="#00c2ff" opacity="0.9"/>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">83.7%</div><div class="pcard-stat-lbl">Accuracy</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">7.8K+</div><div class="pcard-stat-lbl">Releases</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: AI Chatbot -->
+        <div class="pcard reveal" data-cat="ai-ml fullstack">
+          <div class="pcard-left">
+            <div class="pcard-cat">NLP &nbsp;&bull;&nbsp; Conversational AI</div>
+            <h3 class="pcard-title">AI Telegram Chatbot &mdash; Built from Scratch</h3>
+            <p class="pcard-desc">Intelligent Telegram chatbot with multi-turn conversations, intent classification, and context-aware responses. Integrated LangChain and FAISS for semantic document retrieval.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">LangChain</span><span class="tag">FAISS</span><span class="tag">NLP</span><span class="tag">Telegram API</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda/AI-Telegram-Chatbot" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda/AI-Telegram-Chatbot" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--chat">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="f5" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="rgba(0,194,255,0.18)"/><stop offset="100%" stop-color="transparent"/></radialGradient><filter id="gf5"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <ellipse cx="110" cy="90" rx="90" ry="78" fill="url(#f5)"/>
+                <!-- Chat bubbles -->
+                <rect x="55"  y="30" width="90" height="28" rx="12" fill="rgba(30,111,255,0.25)" stroke="rgba(30,111,255,0.5)" stroke-width="0.8"/>
+                <text x="68" y="42"  fill="#e8f0fe" font-size="7" font-family="monospace">Analyze this dataset</text>
+                <text x="68" y="52"  fill="rgba(174,196,232,0.7)" font-size="6" font-family="monospace">User &bull; 09:42</text>
+                <rect x="70"  y="68" width="100" height="35" rx="12" fill="rgba(0,194,255,0.2)" stroke="rgba(0,194,255,0.45)" stroke-width="0.8"/>
+                <text x="82" y="82"  fill="#e8f0fe" font-size="7" font-family="monospace">Found 3 anomalies</text>
+                <text x="82" y="93"  fill="rgba(0,194,255,0.8)" font-size="6.5" font-family="monospace">Confidence: 94.2%</text>
+                <text x="82" y="100" fill="rgba(174,196,232,0.6)" font-size="5.5" font-family="monospace">AI &bull; 09:42</text>
+                <rect x="50"  y="113" width="85" height="22" rx="10" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.45)" stroke-width="0.8"/>
+                <text x="63" y="123" fill="#e8f0fe" font-size="7" font-family="monospace">Show me the chart</text>
+                <text x="63" y="131" fill="rgba(174,196,232,0.6)" font-size="5.5" font-family="monospace">User &bull; 09:43</text>
+                <!-- Typing indicator -->
+                <rect x="70" y="143" width="45" height="18" rx="9" fill="rgba(30,111,255,0.2)" stroke="rgba(30,111,255,0.4)" stroke-width="0.8"/>
+                <circle cx="83" cy="152" r="3" fill="#1e6fff"><animate attributeName="opacity" values="1;0.2;1" dur="1s" begin="0s" repeatCount="indefinite"/></circle>
+                <circle cx="93" cy="152" r="3" fill="#1e6fff"><animate attributeName="opacity" values="1;0.2;1" dur="1s" begin="0.3s" repeatCount="indefinite"/></circle>
+                <circle cx="103" cy="152" r="3" fill="#1e6fff"><animate attributeName="opacity" values="1;0.2;1" dur="1s" begin="0.6s" repeatCount="indefinite"/></circle>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">RAG</div><div class="pcard-stat-lbl">Architecture</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">FAISS</div><div class="pcard-stat-lbl">Vector Search</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Motion Controller -->
+        <div class="pcard reveal" data-cat="ai-ml fullstack">
+          <div class="pcard-left">
+            <div class="pcard-cat">Computer Vision &nbsp;&bull;&nbsp; Deep Learning</div>
+            <h3 class="pcard-title">Motion-Based Game Controller</h3>
+            <p class="pcard-desc">Real-time gesture-controlled gaming using Python, OpenCV, and deep learning. Tracks hand &amp; body motion via webcam achieving 98.6% gesture recognition precision with sub-20ms latency.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">CNN</span><span class="tag">TensorFlow</span><span class="tag">Java</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--cv">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs><radialGradient id="f6" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="rgba(30,111,255,0.2)"/><stop offset="100%" stop-color="transparent"/></radialGradient><filter id="gf6"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+                <ellipse cx="110" cy="90" rx="90" ry="78" fill="url(#f6)"/>
+                <!-- Camera frame -->
+                <rect x="40" y="30" width="140" height="105" rx="8" fill="rgba(8,18,42,0.7)" stroke="rgba(30,111,255,0.4)" stroke-width="1"/>
+                <!-- Hand skeleton -->
+                <g transform="translate(70,45)" filter="url(#gf6)">
+                  <!-- Palm -->
+                  <ellipse cx="40" cy="65" rx="22" ry="18" fill="rgba(30,111,255,0.1)" stroke="rgba(30,111,255,0.5)" stroke-width="1"/>
+                  <!-- Fingers -->
+                  <line x1="24" y1="55" x2="18" y2="28" stroke="#00c2ff" stroke-width="1.5"/>
+                  <line x1="32" y1="50" x2="28" y2="22" stroke="#1e6fff" stroke-width="1.5"/>
+                  <line x1="40" y1="48" x2="40" y2="20" stroke="#00c2ff" stroke-width="1.5"/>
+                  <line x1="48" y1="50" x2="52" y2="22" stroke="#1e6fff" stroke-width="1.5"/>
+                  <line x1="55" y1="55" x2="65" y2="38" stroke="#7c3aed" stroke-width="1.5"/>
+                  <!-- Joints -->
+                  <circle cx="18" cy="28" r="2.5" fill="#00c2ff"/>
+                  <circle cx="28" cy="22" r="2.5" fill="#1e6fff"/>
+                  <circle cx="40" cy="20" r="2.5" fill="#00c2ff"/>
+                  <circle cx="52" cy="22" r="2.5" fill="#1e6fff"/>
+                  <circle cx="65" cy="38" r="2.5" fill="#7c3aed"/>
+                </g>
+                <!-- Detection box -->
+                <rect x="55" y="40" width="110" height="86" rx="4" fill="none" stroke="rgba(0,194,255,0.6)" stroke-width="1" stroke-dasharray="4,3"/>
+                <path d="M55,40 L55,46 M55,40 L61,40" stroke="#00c2ff" stroke-width="2"/>
+                <path d="M165,40 L165,46 M165,40 L159,40" stroke="#00c2ff" stroke-width="2"/>
+                <path d="M55,126 L55,120 M55,126 L61,126" stroke="#00c2ff" stroke-width="2"/>
+                <path d="M165,126 L165,120 M165,126 L159,126" stroke="#00c2ff" stroke-width="2"/>
+                <!-- Label -->
+                <rect x="55" y="144" width="110" height="16" rx="3" fill="rgba(8,18,42,0.85)" stroke="rgba(30,111,255,0.35)" stroke-width="0.8"/>
+                <text x="65" y="155" fill="#00c2ff" font-size="7" font-family="monospace">GESTURE: SWIPE_RIGHT 98.6%</text>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">98.6%</div><div class="pcard-stat-lbl">Precision</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">&lt;20ms</div><div class="pcard-stat-lbl">Latency</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Website Payment Fraud Detection -->
+        <div class="pcard reveal" data-cat="ai-ml data">
+          <div class="pcard-left">
+            <div class="pcard-cat">Fintech &nbsp;&bull;&nbsp; Python &nbsp;&bull;&nbsp; Deep Learning</div>
+            <h3 class="pcard-title">Website Payment Fraud Detection</h3>
+            <p class="pcard-desc">End-to-end payment fraud detection system for web transactions using Python, machine learning, and deep learning. Analyzes transaction metadata, behavioral signals, and historical patterns to flag suspicious activity in real time with high precision.</p>
+            <div class="pcard-tags">
+              <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span class="tag">Scikit-learn</span><span class="tag">SQL</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--fraud">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="40" width="180" height="110" rx="10" stroke="rgba(232,0,122,0.4)" stroke-width="1.5" fill="rgba(232,0,122,0.04)"/>
+                <rect x="35" y="60" width="70" height="35" rx="6" fill="rgba(26,86,255,0.15)" stroke="rgba(26,86,255,0.4)" stroke-width="1"/>
+                <circle cx="48" cy="77" r="8" fill="rgba(232,0,122,0.3)" stroke="rgba(232,0,122,0.7)" stroke-width="1.5"/>
+                <line x1="60" y1="73" x2="98" y2="73" stroke="rgba(180,180,220,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="60" y1="80" x2="88" y2="80" stroke="rgba(180,180,220,0.25)" stroke-width="1.2" stroke-linecap="round"/>
+                <rect x="120" y="55" width="65" height="18" rx="4" fill="rgba(255,60,60,0.15)" stroke="rgba(255,60,60,0.5)" stroke-width="1"/>
+                <text x="152" y="68" font-size="8" fill="rgba(255,100,100,0.9)" text-anchor="middle" font-family="monospace">FLAGGED</text>
+                <rect x="120" y="80" width="65" height="18" rx="4" fill="rgba(0,200,120,0.1)" stroke="rgba(0,200,120,0.4)" stroke-width="1"/>
+                <text x="152" y="93" font-size="8" fill="rgba(0,220,130,0.9)" text-anchor="middle" font-family="monospace">VERIFIED</text>
+                <polyline points="30,145 55,130 80,138 105,118 130,125 155,105 180,112" stroke="rgba(232,0,122,0.7)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="130" cy="125" r="4" fill="rgba(255,60,60,0.9)"/>
+                <circle cx="155" cy="105" r="4" fill="rgba(255,60,60,0.9)"/>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">Real-time</div><div class="pcard-stat-lbl">Detection</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">High</div><div class="pcard-stat-lbl">Precision</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: AI Job Portal Management System -->
+        <div class="pcard reveal" data-cat="fullstack ai-ml">
+          <div class="pcard-left">
+            <div class="pcard-cat">Full-Stack &nbsp;&bull;&nbsp; Java &nbsp;&bull;&nbsp; QuickBase</div>
+            <h3 class="pcard-title">AI Job Portal Management System</h3>
+            <p class="pcard-desc">AI-powered job portal using QuickBase as the platform, with intelligent job matching and candidate recommendation features. Built using Python, Java, and NLP to automate screening workflows and connect candidates with relevant opportunities.</p>
+            <div class="pcard-tags">
+              <span class="tag">Java</span><span class="tag">Python</span><span class="tag">QuickBase</span><span class="tag">NLP</span><span class="tag">SQL</span><span class="tag">Machine Learning</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--chat">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="85" height="140" rx="8" stroke="rgba(26,86,255,0.4)" stroke-width="1.5" fill="rgba(26,86,255,0.04)"/>
+                <rect x="30" y="35" width="65" height="10" rx="3" fill="rgba(26,86,255,0.2)" stroke="rgba(26,86,255,0.4)" stroke-width="1"/>
+                <rect x="30" y="52" width="65" height="10" rx="3" fill="rgba(26,86,255,0.1)" stroke="rgba(26,86,255,0.25)" stroke-width="1"/>
+                <rect x="30" y="69" width="65" height="10" rx="3" fill="rgba(26,86,255,0.1)" stroke="rgba(26,86,255,0.25)" stroke-width="1"/>
+                <rect x="30" y="86" width="65" height="10" rx="3" fill="rgba(232,0,122,0.15)" stroke="rgba(232,0,122,0.5)" stroke-width="1"/>
+                <circle cx="38" cy="91" r="3" fill="rgba(232,0,122,0.8)"/>
+                <rect x="118" y="20" width="85" height="65" rx="8" stroke="rgba(232,0,122,0.4)" stroke-width="1.5" fill="rgba(232,0,122,0.04)"/>
+                <text x="160" y="42" font-size="7" fill="rgba(232,0,122,0.8)" text-anchor="middle" font-family="monospace">AI MATCH</text>
+                <rect x="128" y="48" width="65" height="6" rx="2" fill="rgba(232,0,122,0.2)"/>
+                <rect x="128" y="58" width="50" height="6" rx="2" fill="rgba(232,0,122,0.12)"/>
+                <rect x="128" y="68" width="58" height="6" rx="2" fill="rgba(232,0,122,0.12)"/>
+                <line x1="105" y1="91" x2="118" y2="52" stroke="rgba(150,100,255,0.5)" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <circle cx="111" cy="72" r="3" fill="rgba(150,100,255,0.7)"/>
+                <rect x="118" y="100" width="85" height="60" rx="8" stroke="rgba(0,200,120,0.4)" stroke-width="1.5" fill="rgba(0,200,120,0.04)"/>
+                <text x="160" y="120" font-size="7" fill="rgba(0,200,120,0.8)" text-anchor="middle" font-family="monospace">CANDIDATES</text>
+                <rect x="128" y="128" width="65" height="5" rx="2" fill="rgba(0,200,120,0.2)"/>
+                <rect x="128" y="138" width="50" height="5" rx="2" fill="rgba(0,200,120,0.12)"/>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">AI</div><div class="pcard-stat-lbl">Job Matching</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">NLP</div><div class="pcard-stat-lbl">Screening</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: Supermarket Billing & Inventory System -->
+        <div class="pcard reveal" data-cat="fullstack">
+          <div class="pcard-left">
+            <div class="pcard-cat">Java &nbsp;&bull;&nbsp; OOP &nbsp;&bull;&nbsp; Desktop App</div>
+            <h3 class="pcard-title">Supermarket Billing &amp; Inventory System</h3>
+            <p class="pcard-desc">Complete supermarket billing and inventory management desktop application using Java AWT components and object-oriented design. Features real-time stock tracking, automated billing, discount management, receipt generation, and a MySQL database backend.</p>
+            <div class="pcard-tags">
+              <span class="tag">Java</span><span class="tag">AWT</span><span class="tag">OOP</span><span class="tag">MySQL</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--primary">View Project &nbsp;&rarr;</a>
+              <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="pcard-btn pcard-btn--ghost"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
+            </div>
+          </div>
+          <div class="pcard-right">
+            <div class="pcard-illus pcard-illus--data">
+              <svg viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="25" width="190" height="130" rx="8" stroke="rgba(26,86,255,0.3)" stroke-width="1.5" fill="rgba(26,86,255,0.03)"/>
+                <rect x="15" y="25" width="190" height="22" rx="8" fill="rgba(26,86,255,0.12)"/>
+                <text x="110" y="40" font-size="8" fill="rgba(180,200,255,0.9)" text-anchor="middle" font-family="monospace">SUPERMARKET POS</text>
+                <line x1="15" y1="65" x2="205" y2="65" stroke="rgba(100,120,200,0.2)" stroke-width="1"/>
+                <rect x="25" y="72" width="80" height="8" rx="2" fill="rgba(180,200,255,0.15)"/>
+                <rect x="120" y="72" width="30" height="8" rx="2" fill="rgba(180,200,255,0.1)"/>
+                <rect x="160" y="72" width="35" height="8" rx="2" fill="rgba(0,200,120,0.2)"/>
+                <rect x="25" y="86" width="80" height="8" rx="2" fill="rgba(180,200,255,0.1)"/>
+                <rect x="120" y="86" width="30" height="8" rx="2" fill="rgba(180,200,255,0.08)"/>
+                <rect x="160" y="86" width="35" height="8" rx="2" fill="rgba(0,200,120,0.15)"/>
+                <rect x="25" y="100" width="80" height="8" rx="2" fill="rgba(180,200,255,0.1)"/>
+                <rect x="120" y="100" width="30" height="8" rx="2" fill="rgba(180,200,255,0.08)"/>
+                <rect x="160" y="100" width="35" height="8" rx="2" fill="rgba(232,0,122,0.2)"/>
+                <rect x="55" y="120" width="110" height="24" rx="5" fill="rgba(232,0,122,0.2)" stroke="rgba(232,0,122,0.6)" stroke-width="1.5"/>
+                <text x="110" y="136" font-size="9" fill="rgba(255,100,160,0.95)" text-anchor="middle" font-family="monospace">PRINT RECEIPT</text>
+              </svg>
+            </div>
+            <div class="pcard-stats">
+              <div class="pcard-stat"><div class="pcard-stat-val">Real-time</div><div class="pcard-stat-lbl">Stock Tracking</div></div>
+              <div class="pcard-stat"><div class="pcard-stat-val">MySQL</div><div class="pcard-stat-lbl">Backend</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARALLAX -->
+  <div class="parallax" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80')"></div>
+
+  <!-- AWARDS -->
+  <section id="awards">
+    <div class="inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Recognition</div>
+        <h2 class="s-title">Awards &amp; Honors</h2>
+      </div>
+      <div class="awards-grid">
+
+        <div class="award-card card reveal">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="card-title">Mrs. Joy Appenteng Award &mdash; $500</div>
+          <div class="card-body">Bowling Green State University &nbsp;&middot;&nbsp; 2025&ndash;2026<br><br>Awarded $500 scholarship for outstanding academic performance among all international students in the MS Computer Science program.</div>
+        </div>
+
+        <div class="award-card card reveal">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="card-title">Graduate Merit Scholarship &mdash; Full Tuition</div>
+          <div class="card-body">Bowling Green State University &nbsp;&middot;&nbsp; 2024&ndash;2026<br><br>Received a full tuition fee scholarship for the MS Computer Science program based on strong academic performance &mdash; covering the entire cost of graduate education.</div>
+        </div>
+
+        <div class="award-card card reveal">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="card-title">Cash Prize &mdash; Academic Excellence</div>
+          <div class="card-body">RMK College of Engineering &nbsp;&middot;&nbsp; 2020&ndash;2024<br><br>Received a cash prize for achieving a GPA of 9.47/10.0 in Bachelor of Engineering across all four years of undergraduate study.</div>
+        </div>
+
+        <div class="award-card card reveal">
+          <div class="award-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M6 9H4.5a2.5 2.5 0 000 5H6"/><path d="M18 9h1.5a2.5 2.5 0 010 5H18"/><path d="M8 9h8"/><path d="M8 15h8"/><path d="M12 4v5M12 15v5"/></svg>
+          </div>
+          <div class="card-title">Best Performer &mdash; Classical Dance</div>
+          <div class="card-body">7th Grade &nbsp;&middot;&nbsp; Extracurricular Excellence<br><br>Won the Best Performer trophy at a classical dance competition &mdash; recognized for exceptional artistic skill, stage presence, and performance quality.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARALLAX -->
+  <div class="parallax" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80')"></div>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Publications</div>
+        <h2 class="s-title">Research</h2>
+      </div>
+      <div class="res-list">
+
+        <div class="card res-card reveal">
+          <div class="res-num">01</div>
+          <div class="card-title">Pneumonia Detection and Classification Using Chest X-Ray Images</div>
+          <div class="res-journal">International Journal of Research and Analytical Reviews (IJRAR) &middot; 2024</div>
+          <div class="card-body">Developed a computer-aided diagnosis system using CNNs and VGG16 transfer learning to classify pneumonia from chest X-ray images. Trained on 5,800+ images with data augmentation and normalization. Evaluated using confusion matrices, precision-recall curves, and ROC-AUC analysis &mdash; achieving 92% classification accuracy.</div>
+          <span class="res-badge">Published &mdash; IJRAR, 2024</span>
+        </div>
+
+        <div class="card res-card reveal">
+          <div class="res-num">02</div>
+          <div class="card-title">Edge AI and Digital Twin for Autonomous Vehicles</div>
+          <div class="res-journal">Master's Directed Research &middot; Bowling Green State University &middot; 2024&ndash;2026</div>
+          <div class="card-body">Conducting a literature review of 15+ research papers on digital twin architectures and edge AI frameworks. Developing data pipelines for processing vehicle telemetry, performance metrics, and fault detection data. Explores federated learning and distributed ML inference across edge compute nodes.</div>
+          <span class="res-badge upcoming">Upcoming Publication</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-circle-bl"></div>
+    <div class="contact-circle-bl2"></div>
+    <div class="inner">
+      <div class="s-header reveal">
+        <div class="s-eyebrow">Get in Touch</div>
+        <h2 class="s-title">Let&rsquo;s Work Together</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <div class="contact-left">
+          <p class="contact-intro">I'm open to new opportunities, collaborations, and research conversations. Whether you have a role, a project idea, or just want to connect &mdash; reach out.</p>
+          <div class="c-items">
+            <a href="mailto:lohitharatakonda.179@gmail.com" class="c-item c-item--email">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="c-lbl">Email</div>
+                <div class="c-val">lohitharatakonda.179@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+14194944565" class="c-item c-item--phone">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.22 2 2 0 012.18 0h3a2 2 0 012 1.72 19.79 19.79 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 19.79 19.79 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="c-lbl">Phone</div>
+                <div class="c-val">(+1) 419-494-4565</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/lohitha-ratakonda" target="_blank" rel="noopener" class="c-item c-item--linkedin">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <div class="c-lbl">LinkedIn</div>
+                <div class="c-val">linkedin.com/in/lohitha-ratakonda</div>
+              </div>
+            </a>
+            <a href="https://github.com/2124lohitharatakonda" target="_blank" rel="noopener" class="c-item c-item--github">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div class="c-lbl">GitHub</div>
+                <div class="c-val">github.com/2124lohitharatakonda</div>
+              </div>
+            </a>
+            <a href="https://wa.me/14194944565?text=Hi%2C%20I%20came%20across%20your%20profile%20and%20found%20your%20background%20interesting." target="_blank" rel="noopener" class="c-item c-item--whatsapp">
+              <div class="c-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <div class="c-lbl">WhatsApp</div>
+                <div class="c-val">Chat on WhatsApp</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="contact-status-card">
+            <div class="status-row"><span class="status-dot"></span>Open to new opportunities</div>
+            <div class="status-divider"></div>
+            <div class="status-detail">&#128205; Bowling Green, OH, USA</div>
+            <div class="status-detail">Focus: AI / ML &middot; Full-Stack &middot; Research</div>
+            <a href="images/Lohitha__Ratakonda__Resume.pdf" download class="btn btn-primary" style="margin-top:1.2rem;width:100%;justify-content:center">&#8595; Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-name">Lohitha Sai Priya Ratakonda</div>
+      <div class="footer-copy">&copy; 2026 &nbsp;&middot;&nbsp; All Rights Reserved</div>
+      <a href="https://www.linkedin.com/in/lohitha-ratakonda" target="_blank" rel="noopener" class="footer-li" aria-label="LinkedIn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -5,7 +5,6 @@
 
 /* ---- RESET ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-img { max-width: 100%; height: auto; display: block; }
 
 /* ---- TOKENS ---- */
 :root {
@@ -61,7 +60,7 @@ img { max-width: 100%; height: auto; display: block; }
   --inner: 1200px;
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'EB Garamond', Georgia, serif;
@@ -241,14 +240,11 @@ ul  { list-style: none; }
   opacity: 0; animation: fadeUp 0.8s 0.35s ease forwards;
 }
 .hero-name {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 1;
-  letter-spacing: -2px;
-  font-weight: 800;
-  color: var(--text);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 800; line-height: 1.08;
+  letter-spacing: -0.02em; color: var(--text);
   margin-bottom: 0.2rem;
-  opacity: 0;
-  animation: fadeUp 0.9s 0.5s ease forwards;
+  opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards;
   text-transform: uppercase;
 }
 .hero-name span {
@@ -268,13 +264,9 @@ ul  { list-style: none; }
 }
 
 .hero-bio {
-  max-width: 450px;
-  font-size: 1.05rem;
-  color: rgba(255,255,255,.75);
-  line-height: 1.8;
-  margin-bottom: 0.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s 0.85s ease forwards;
+  font-size: 0.975rem; color: var(--text-3);
+  line-height: 1.8; margin-bottom: 0.5rem; max-width: 520px;
+  opacity: 0; animation: fadeUp 0.8s 0.85s ease forwards;
 }
 
 /* Typewriter role line */
@@ -382,7 +374,7 @@ ul  { list-style: none; }
 .hero-circle-ring {
   position: absolute;
   bottom: 30px; left: 50%; transform: translateX(-50%);
-  width: 450px; height: 450px;
+  width: 360px; height: 360px;
   border-radius: 50%;
   z-index: 3;
   /* Pink → purple → blue gradient fill — matches reference */
@@ -440,9 +432,9 @@ ul  { list-style: none; }
 /* ── PNG person — emerges from circle, head above ring ── */
 .hero-photo-inner {
   position: absolute;
-  bottom: -175px;
+  bottom: 80px;
   left: 50%; transform: translateX(-50%);
-  width: 500px;
+  width: 620px;
   height: 1050px;
   z-index: 8;
   overflow: visible;
@@ -476,10 +468,7 @@ ul  { list-style: none; }
   position: absolute; top: 0; left: 12px; right: 12px; height: 1px;
   background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), transparent);
 }
-.hero-ai-card--1 {
-    top: 90px;
-    right: -50px;
-}
+.hero-ai-card--1 { top: 55px;  right: -18px; animation-delay: 0s; }
 .hero-ai-card--2 { top: 170px; left: -28px;  animation-delay: 1.3s; }
 .hero-ai-card--3 { bottom: 140px; right: -22px; animation-delay: 0.8s; }
 
@@ -665,7 +654,7 @@ section { padding: 6rem 0; position: relative; }
 .s-header { margin-bottom: 3rem; }
 .s-eyebrow {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-size: 2.4rem; font-weight: 700; text-transform: uppercase;
+  font-size: 1.4rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.16em; color: var(--cyan);
   margin-bottom: 0.7rem;
 }
@@ -769,7 +758,7 @@ section { padding: 6rem 0; position: relative; }
 .about-line { display: block; width: 48px; height: 1px; background: var(--border-b); }
 
 /* Bio layout */
-.bio-row { display: grid; grid-template-columns: 320px 1fr; gap: 3.5rem; align-items: center; margin-bottom: 1rem; overflow: hidden; }
+.bio-row { display: grid; grid-template-columns: 320px 1fr; gap: 3.5rem; align-items: center; margin-bottom: 1rem; }
 .bio-photo {
   border-radius: 16px; overflow: hidden;
   border: 1px solid var(--border-b);
@@ -784,7 +773,7 @@ section { padding: 6rem 0; position: relative; }
   z-index: 1; pointer-events: none;
 }
 .bio-photo:hover { box-shadow: var(--sh-lg), 0 0 40px rgba(30,111,255,0.3); transform: translateY(-5px); }
-.bio-photo img { width:100%; height:420px; object-fit:cover; object-position:center 40%; transition:transform 0.6s; }
+.bio-photo img { width:100%; height:420px; object-fit:cover; object-position:center top; transition:transform 0.6s; }
 .bio-photo:hover img { transform: scale(1.05); }
 .bio-text { font-size: 0.95rem; color: var(--text-3); line-height: 1.8; margin-bottom: 1rem; }
 .bio-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:1.25rem; }
@@ -845,7 +834,125 @@ a.edu-link:hover { color: var(--cyan); }
    ============================================================ */
 #experience { background: var(--bg2); }
 
-.exp-list { display:flex; flex-direction:column; gap:1.25rem; position:relative; }
+.exp-list { display:flex; flex-direction:column; gap:2rem; position:relative; }
+
+/* ============================================================
+   NEW EXPERIENCE CARD — image left / content right
+   ============================================================ */
+.exp-card-new {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 280px;
+}
+.exp-card-new:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(232,0,122,0.12), 0 4px 12px rgba(0,0,0,0.08);
+  border-color: rgba(232,0,122,0.18);
+}
+
+/* Left image panel */
+.exp-img-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+.exp-img-panel img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+.exp-card-new:hover .exp-img-panel img { transform: scale(1.04); }
+.exp-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg,
+    rgba(232,0,122,0.35) 0%,
+    rgba(26,86,255,0.25) 60%,
+    rgba(0,0,0,0.45) 100%);
+}
+.exp-img-badge {
+  position: absolute; bottom: 1.2rem; left: 1.2rem; z-index: 2;
+}
+.exp-img-badge .exp-logo-wrap {
+  width: 56px; height: 56px; border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+}
+
+/* Right content panel */
+.exp-content-panel {
+  padding: 2rem 2.2rem 2rem 2rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  background: #fff;
+}
+.exp-meta-row {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.exp-category-tag {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--primary);
+  background: rgba(232,0,122,0.08);
+  border: 1px solid rgba(232,0,122,0.2);
+  padding: 0.25rem 0.75rem; border-radius: 50px;
+}
+.exp-date-badge {
+  font-size: 0.8rem; font-weight: 700; color: var(--primary);
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(232,0,122,0.35);
+  box-shadow: 0 2px 10px rgba(232,0,122,0.12);
+  padding: 0.3rem 0.9rem; border-radius: 50px;
+  white-space: nowrap;
+}
+.exp-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.55rem; font-weight: 800;
+  color: #0a0f1e; margin: 0; line-height: 1.25;
+}
+.exp-location {
+  font-size: 0.83rem; color: #4a5270; margin: 0;
+}
+.exp-bullets-new {
+  display: flex; flex-direction: column; gap: 0.45rem;
+  margin: 0; padding: 0; list-style: none;
+  flex: 1;
+}
+.exp-bullets-new li {
+  font-size: 0.88rem; color: #2d3555; line-height: 1.7;
+  padding-left: 1.1rem; position: relative;
+}
+.exp-bullets-new li::before {
+  content: ''; position: absolute; left: 0; top: 0.62em;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--primary);
+}
+.exp-tags-row {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+.exp-tags-row .tag {
+  font-size: 0.73rem; padding: 0.2rem 0.65rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .exp-card-new { grid-template-columns: 1fr; }
+  .exp-img-panel { min-height: 200px; }
+}
+@media (max-width: 600px) {
+  .exp-content-panel { padding: 1.4rem; }
+  .exp-img-panel { min-height: 160px; }
+  .exp-title { font-size: 1.2rem; }
+}
 .exp-list::before {
   content:''; position:absolute; left:27px; top:28px; bottom:28px;
   width:1px;
@@ -922,90 +1029,19 @@ a.edu-link:hover { color: var(--cyan); }
 /* ============================================================
    AWARDS
    ============================================================ */
-/* ── Awards ── */
-#awards {
-  background: linear-gradient(160deg, #fff5f9 0%, #f5f7ff 50%, #fdf0f6 100%);
-  position: relative;
-  overflow: hidden;
-}
-#awards::before {
-  content: '';
-  position: absolute;
-  top: -120px; right: -120px;
-  width: 420px; height: 420px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,0,122,0.07) 0%, transparent 70%);
-  pointer-events: none;
-}
-#awards::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -80px;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(26,86,255,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.award-card {
-  position: relative;
-  border-top: none !important;
-  border-radius: 18px !important;
-  padding: 2rem 2rem 2rem 2rem !important;
-  background: #fff !important;
-  border: 1px solid rgba(232,0,122,0.12) !important;
-  box-shadow: 0 4px 20px rgba(232,0,122,0.06), 0 1px 4px rgba(13,27,74,0.05) !important;
-  overflow: hidden;
-  transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s !important;
-}
-.award-card::before {
-  display: block !important;
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary) 0%, rgba(232,0,122,0.3) 60%, transparent 100%);
-  border-radius: 18px 18px 0 0;
-}
-.award-card::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,0,122,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.award-card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 12px 40px rgba(232,0,122,0.13), 0 2px 8px rgba(13,27,74,0.08) !important;
-  border-color: rgba(232,0,122,0.28) !important;
-}
-
+#awards { background: var(--bg2); }
+.awards-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
 .award-icon {
-  width: 52px; height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(232,0,122,0.12) 0%, rgba(232,0,122,0.06) 100%);
-  border: 1.5px solid rgba(232,0,122,0.22);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--primary);
-  margin-bottom: 1.2rem;
-  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 10px rgba(232,0,122,0.10);
+  width:44px; height:44px; border-radius:10px;
+  background:var(--primary-lt); border:1px solid var(--border-b);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--cyan); margin-bottom:1rem;
+  transition:background 0.3s, color 0.3s, transform 0.3s;
 }
-.award-card:hover .award-icon {
-  background: linear-gradient(135deg, var(--primary) 0%, #ff4da6 100%);
-  color: #fff;
-  border-color: transparent;
-  transform: scale(1.08) rotate(6deg);
-  box-shadow: 0 6px 20px rgba(232,0,122,0.35);
-}
+.award-card:hover .award-icon { background:var(--grad); color:#fff; border-color:transparent; transform:scale(1.1) rotate(5deg); }
+.award-card { border-top:2px solid transparent; transition:box-shadow 0.28s, transform 0.28s, border-top-color 0.28s; }
+.award-card::before { display:none; }
+.award-card:hover { border-top-color:var(--primary); }
 
 /* ============================================================
    RESEARCH
@@ -1034,65 +1070,38 @@ a.edu-link:hover { color: var(--cyan); }
 
 .contact-grid { display:grid; grid-template-columns:1fr 300px; gap:3rem; align-items:start; }
 .contact-intro { font-size:0.95rem; color:var(--text-3); line-height:1.78; margin-bottom:2rem; }
-/* Contact links — clean 2-col grid, no individual boxes */
-.c-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid rgba(232,0,122,0.15);
-  border-radius: 16px;
-  overflow: hidden;
-}
+.c-items { display:flex; flex-direction:column; gap:0.6rem; }
 .c-item {
-  display: flex; align-items: center; gap: 1rem;
-  padding: 1.3rem 1.5rem;
-  background: transparent;
-  border: none; border-radius: 0; box-shadow: none;
-  border-bottom: 1px solid rgba(232,0,122,0.10);
-  border-right: 1px solid rgba(232,0,122,0.10);
-  text-decoration: none;
-  position: relative;
-  transition: background 0.2s, padding-left 0.22s;
+  display:flex; align-items:center; gap:0.9rem;
+  padding:0.9rem 1.1rem;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); box-shadow:var(--sh-sm);
+  transition:box-shadow 0.22s, transform 0.22s, border-color 0.22s, background 0.22s;
+  position:relative;
 }
-/* Remove right border on even items (right column) */
-.c-item:nth-child(even) { border-right: none; }
-/* Remove bottom border on last two items */
-.c-item:nth-last-child(-n+2) { border-bottom: none; }
-/* If 5 items, last one spans 2 cols */
-.c-item:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  border-right: none;
-}
-.c-item:hover {
-  background: rgba(232,0,122,0.04);
-  padding-left: 1.9rem;
-  transform: none; box-shadow: none;
-}
-.c-item::before {
-  content: '';
-  position: absolute; left: 0; top: 0; bottom: 0;
-  width: 3px; border-radius: 0 3px 3px 0;
-  background: var(--primary);
-  transform: scaleY(0); transform-origin: center;
-  transition: transform 0.22s;
-}
-.c-item:hover::before { transform: scaleY(1); }
+.c-item:hover { box-shadow:var(--sh-md), var(--sh-blue); transform:translateX(5px); border-color:var(--border-b); background:var(--card-h); }
 .c-icon {
-  width: 42px; height: 42px; border-radius: 50%;
-  background: rgba(232,0,122,0.08); border: 1px solid rgba(232,0,122,0.18);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; color: var(--primary);
-  transition: background 0.22s, color 0.22s;
+  width:38px; height:38px; border-radius:8px;
+  background:var(--primary-lt); border:1px solid var(--border-b);
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; color:var(--cyan);
+  transition:background 0.22s, transform 0.22s;
 }
-.c-item:hover .c-icon { background: var(--primary); color: #fff; }
-.c-lbl { font-size: 0.68rem; font-weight: 700; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.15rem; }
-.c-val { font-size: 0.88rem; color: var(--text-2); }
+.c-item:hover .c-icon { background:var(--grad); border-color:transparent; color:#fff; transform:scale(1.05); }
+.c-lbl { font-size:0.7rem; font-weight:600; color:var(--text-4); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:0.1rem; }
+.c-val { font-size:0.88rem; color:var(--text-2); }
 
-/* Platform accent on hover */
-.c-item--email:hover .c-icon   { background: #ea4335; }
-.c-item--phone:hover .c-icon   { background: #0097a7; }
-.c-item--linkedin:hover .c-icon { background: #0077b5; }
-.c-item--github:hover .c-icon  { background: #24292e; }
-.c-item--whatsapp:hover .c-icon { background: #25d366; }
+/* Platform hovers */
+.c-item--email:hover   { border-color:rgba(234,67,53,0.4); }
+.c-item--email:hover .c-icon   { background:#ea4335; }
+.c-item--phone:hover   { border-color:rgba(0,151,167,0.4); }
+.c-item--phone:hover .c-icon   { background:#0097a7; }
+.c-item--linkedin:hover { border-color:rgba(0,119,181,0.4); }
+.c-item--linkedin:hover .c-icon { background:#0077b5; }
+.c-item--github:hover  { border-color:rgba(255,255,255,0.2); }
+.c-item--github:hover .c-icon  { background:#333; }
+.c-item--whatsapp:hover { border-color:rgba(37,211,102,0.4); }
+.c-item--whatsapp:hover .c-icon { background:#25d366; }
 
 .contact-status-card {
   background:var(--card); border:1px solid var(--border-b);
@@ -1283,26 +1292,6 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:1.75r
   flex-direction: column;
   gap: 0.9rem;
 }
-.pcard-rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 0.5rem;
-}
-.pcard-stars {
-  color: #f59e0b;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-}
-.pcard-score {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--primary);
-  background: rgba(232,0,122,0.1);
-  border: 1px solid rgba(232,0,122,0.25);
-  padding: 0.15rem 0.5rem;
-  border-radius: 20px;
-}
 .pcard-cat {
   font-size: 0.78rem;
   font-weight: 600;
@@ -1366,32 +1355,19 @@ footer { background:var(--bg); border-top:1px solid var(--border); padding:1.75r
 }
 
 .pcard-right {
-  width: 420px;
-  min-height: 320px;
+  width: 280px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   border-left: 1px solid var(--border-b);
-  background: #060e20;
-  overflow: hidden;
+  background: rgba(5,12,26,0.5);
 }
 .pcard-illus {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem;
-  overflow: hidden;
-  background: #060e20;
-  min-height: 280px;
-}
-.pcard-illus img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  border-radius: 8px;
+  padding: 1.2rem;
 }
 .pcard-illus svg {
   width: 100%;
@@ -1668,83 +1644,45 @@ a.edu-link:hover { color: var(--primary); }
 /* ── Experience ── */
 #experience { background: var(--bg2); }
 .exp-list::before {
-  background: linear-gradient(to bottom, transparent, rgba(232,0,122,0.25) 10%, rgba(232,0,122,0.25) 90%, transparent);
+  background: linear-gradient(to bottom, transparent, rgba(232,0,122,0.18) 10%, rgba(232,0,122,0.18) 90%, transparent);
 }
 .exp-card::after {
   background: var(--bg2);
-  border-color: rgba(232,0,122,0.35);
+  border-color: rgba(232,0,122,0.22);
   box-shadow: 0 0 0 3px var(--bg2);
 }
 .exp-card:hover::after {
   background: var(--primary);
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(232,0,122,0.15), 0 0 12px rgba(232,0,122,0.4);
+  box-shadow: 0 0 0 4px rgba(232,0,122,0.12), var(--sh-blue);
 }
-
-/* Pink-to-white gradient card wash */
-.exp-card {
-  background: linear-gradient(120deg,
-    rgba(255, 230, 242, 0.95) 0%,
-    rgba(255, 245, 250, 0.98) 40%,
-    #ffffff 70%);
-  border: 1px solid rgba(232,0,122,0.14);
-  box-shadow: 0 2px 20px rgba(232,0,122,0.07), 0 1px 4px rgba(0,0,0,0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.exp-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(232,0,122,0.14), 0 4px 12px rgba(0,0,0,0.07);
-  border-color: rgba(232,0,122,0.28);
-}
-
-/* Left pink accent bar */
-.exp-card::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, var(--primary), var(--cyan));
-  border-radius: 4px 0 0 4px;
-  z-index: 2;
-}
-
-.exp-logo-wrap { background: #fff; border-color: rgba(232,0,122,0.18); box-shadow: 0 2px 10px rgba(232,0,122,0.1); }
-.exp-logo--cdot { background: #1a3fb0 !important; border-color: #2a50d0 !important; color: #fff !important; font-size: 0.5rem !important; font-weight: 800 !important; text-align: center !important; line-height: 1.4 !important; }
-.exp-logo--senecio { width: 90px !important; height: 40px !important; border-radius: 10px !important; background: #ffffff !important; border: 2px solid rgba(26,86,255,0.25) !important; color: #1a56ff !important; font-size: 0.68rem !important; font-weight: 900 !important; text-align: center !important; line-height: 1 !important; letter-spacing: 0.08em !important; box-shadow: 0 2px 12px rgba(26,86,255,0.15) !important; white-space: nowrap !important; }
+.exp-logo-wrap { background: #fff; border-color: rgba(0,0,0,0.09); }
 .exp-role { color: var(--pt); }
 .exp-co { color: var(--pt3); }
 .exp-date {
   color: var(--primary);
-  border-color: rgba(232,0,122,0.28);
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 10px rgba(232,0,122,0.12);
+  border-color: rgba(232,0,122,0.22);
+  background: rgba(232,0,122,0.08);
 }
 .exp-bullets li { color: var(--pt2); }
 .exp-bullets li::before { background: var(--primary); }
 
-/* Pink gradient image overlay on exp cards */
-.exp-card > img[aria-hidden] {
-  opacity: 0.88 !important;
-}
-.exp-card > div[style*="linear-gradient(to right"] {
-  background: linear-gradient(to right,
-    rgba(255,235,245,0.99) 0%,
-    rgba(255,240,248,0.98) 50%,
-    rgba(255,245,250,0.88) 65%,
-    rgba(255,250,252,0.50) 80%,
-    rgba(255,255,255,0.0) 100%) !important;
-}
-
 /* ── Projects ── */
 #projects { background: var(--bg); }
-#projects .inner { max-width: 1440px; padding: 0 2rem; }
 
 /* ── Awards ── */
-#awards .inner { max-width: 1440px; padding: 0 2rem; }
-#awards .card .card-title { color: var(--pt); font-size: 1.08rem; font-weight: 700; margin-bottom: 0.3rem; }
-#awards .card .card-body { color: var(--pt3); font-size: 0.9rem; line-height: 1.7; }
-.award-card .card-subtitle { font-size: 0.8rem; color: var(--primary); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1rem; }
+#awards { background: var(--bg2); }
+.award-icon {
+  background: rgba(232,0,122,0.08);
+  border-color: rgba(232,0,122,0.20);
+  color: var(--primary);
+}
+.award-card:hover .award-icon { background: var(--grad); color: #fff; border-color: transparent; }
+.award-card:hover { border-top-color: var(--primary); }
+/* Award text on light background */
+#awards .card { background: #fff; border-color: rgba(0,0,0,0.07); }
+#awards .card .card-title { color: var(--pt); }
+#awards .card .card-body { color: var(--pt3); }
 
 /* ── Research ── */
 #research { background: var(--bg); }
@@ -1757,17 +1695,28 @@ a.edu-link:hover { color: var(--primary); }
 #research .card { background: #fff; border-color: rgba(0,0,0,0.07); }
 
 /* ── Contact ── */
-#contact {
-  background: url('../images/BG_1.png') center center / cover no-repeat;
-  background-attachment: fixed;
-}
+#contact { background: var(--bg2); }
 #contact::before {
   background: radial-gradient(circle, rgba(232,0,122,0.06) 0%, transparent 65%);
 }
 .contact-intro { color: var(--pt2); }
-.c-item { background: transparent; }
-.c-item:hover { background: rgba(232,0,122,0.04); }
-.c-icon { background: rgba(232,0,122,0.08); border-color: rgba(232,0,122,0.18); color: var(--primary); }
+.c-item {
+  background: #fff;
+  border-color: rgba(0,0,0,0.07);
+  box-shadow: 0 2px 10px rgba(13,27,74,0.06);
+}
+.c-item:hover {
+  background: #fff;
+  border-color: rgba(232,0,122,0.28);
+  box-shadow: 0 4px 24px rgba(13,27,74,0.10), 0 0 0 1px rgba(232,0,122,0.15);
+  transform: translateX(5px);
+}
+.c-icon {
+  background: rgba(232,0,122,0.08);
+  border-color: rgba(232,0,122,0.20);
+  color: var(--primary);
+}
+.c-item:hover .c-icon { background: var(--grad); border-color: transparent; color: #fff; }
 .c-lbl { color: var(--pt4); }
 .c-val { color: var(--pt2); }
 .contact-status-card {
@@ -1971,336 +1920,3 @@ footer { background: #fff; border-top-color: rgba(0,0,0,0.07); }
 .bio-photo { border-color: rgba(232,0,122,0.22); box-shadow: 0 8px 40px rgba(13,27,74,0.14), 0 4px 24px rgba(232,0,122,0.15); }
 .bio-photo::before { background: linear-gradient(to bottom, transparent 60%, rgba(255,255,255,0.5) 100%); }
 .bio-photo:hover { box-shadow: 0 12px 50px rgba(13,27,74,0.18), 0 0 40px rgba(232,0,122,0.22); }
-
-/* ============================================================
-   MOBILE FIXES — comprehensive responsive pass
-   ============================================================ */
-
-/* 1. Sections with decorative pseudo-elements must clip them */
-#home, #about, #skills, #awards, #contact, #research { overflow: hidden; }
-
-/* 2. Project/awards inner: override 2rem padding on mobile
-      (these IDs have higher specificity than .inner alone) */
-@media (max-width: 640px) {
-  #projects .inner, #awards .inner { padding: 0 1.2rem; }
-  /* Fix negative inline margins pushing cards-row beyond inner bounds */
-  .cards-row { margin-left: 0 !important; margin-right: 0 !important; }
-  /* Fix grid 1fr not constraining to container due to min-width:auto */
-  .cards-row { grid-template-columns: minmax(0, 1fr) !important; }
-  .cards-row > * { min-width: 0; overflow: hidden; }
-  /* Contact grid: single column on small screens */
-  .c-items { grid-template-columns: 1fr; }
-  .c-item:nth-child(even) { border-right: none; }
-  .c-item:last-child:nth-child(odd) { grid-column: auto; }
-  /* Section title: prevent overflow */
-  .s-title, .s-eyebrow { word-break: break-word; overflow-wrap: break-word; max-width: 100%; }
-  /* Hero inner: prevent clipping of name */
-  .hero-inner { overflow: visible; }
-  /* About bio photo constrained */
-  .bio-photo { width: 100%; max-width: 320px; margin: 0 auto; }
-  /* pcard image area: taller on mobile so contain images show better */
-  .pcard-right { height: 260px !important; }
-  /* pcard-left padding tightened */
-  .pcard-left { padding: 1.4rem 1.2rem; }
-  /* Award cards: ensure grid is single column */
-  .awards-grid { grid-template-columns: 1fr !important; }
-  /* Research cards full-width */
-  .res-card { max-width: 100%; }
-  /* res-list full-width */
-  .res-list { overflow: hidden; }
-  /* Filters wrap nicely */
-  .proj-filters { gap: 0.4rem; }
-  .proj-filter { font-size: 0.8rem; padding: 0.35rem 0.8rem; }
-}
-
-@media (max-width: 480px) {
-  #projects .inner, #awards .inner { padding: 0 1rem; }
-  .pcard-right { height: 220px !important; }
-  .pcard-left { padding: 1.2rem 1rem; }
-  /* Contact item padding already set above at 640px; shrink icon further */
-  .c-icon { width: 32px; height: 32px; }
-  /* Hero stats on very small screens */
-  .hero-name { font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
-}
-
-/* 3. Hamburger/mobile-menu – ensure they never exceed viewport */
-.mobile-menu { max-width: 100vw; box-sizing: border-box; }
-.mobile-menu .nav-links-mobile { padding: 0 1.2rem; }
-
-/* 4. All images constrained (belt-and-suspenders) */
-.cards-row img, .bio-row img, .res-card img,
-.award-card img, .pcard img { max-width: 100%; height: auto; }
-
-/* ============================================================
-   PROFESSIONAL AUDIT — SENIOR-LEVEL COMPLETE MOBILE OVERHAUL
-   ============================================================ */
-
-/* ── Accessibility: reduced motion ── */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ── Accessibility: focus rings ── */
-:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-a:focus-visible, button:focus-visible { outline-color: var(--primary); }
-
-/* ── Accessibility: minimum touch targets ── */
-.hamburger { min-width: 44px; min-height: 44px; padding: 10px 4px; justify-content: center; align-items: center; }
-.btn-pill-solid, .btn-pill-outline, .btn { min-height: 44px; }
-.hero-social-link { width: 44px; height: 44px; }
-.proj-filter { min-height: 38px; display: inline-flex; align-items: center; }
-.mobile-menu a { min-height: 52px; display: flex; align-items: center; }
-
-/* ============================================================
-   HERO SECTION — CRITICAL MOBILE RECONSTRUCTION
-   The root cause of name cutoff: .hero-right { min-height: 540px }
-   was eating all vertical space before text even rendered.
-   ============================================================ */
-
-@media (max-width: 960px) {
-  /* Kill the fixed min-height that pushes content off-screen */
-  .hero-right { min-height: unset !important; }
-  /* Reduce gap between stacked sections */
-  .hero-inner { gap: 1.5rem !important; }
-}
-
-@media (max-width: 640px) {
-  /* Section itself */
-  #home { min-height: 100dvh; }
-  .hero-inner { padding: 5rem 1.2rem 1.5rem !important; gap: 1.2rem !important; }
-  .hero-right { min-height: unset !important; }
-
-  /* Shrink the photo ring to a reasonable mobile size */
-  .hero-photo-ring { width: 210px !important; height: 270px !important; }
-  .hero-circle-ring {
-    width: 420px !important; height: 420px !important;
-    bottom: 15px !important;
-  }
-  .hero-photo-inner {
-    width: 300px !important; height: 480px !important;
-    bottom: 25px !important;
-  }
-
-  /* Hide ALL floating AI cards — they collide on mobile.
-     Stats strip already shows the same info below the hero. */
-  .hero-ai-card { display: none !important; }
-  .hero-avail-badge { display: none !important; }
-  .hero-ai-scan { display: none !important; }
-
-  /* Kill GPU-heavy decorative elements that serve no mobile purpose */
-  .hero-ai-canvas { display: none !important; }
-  .hero-particles { display: none !important; }
-  .hero-photo-ring::before { display: none !important; }
-  .hero-photo-ring::after { display: none !important; }
-  #home::before { display: none !important; }
-  .hero-circle-ring::before { animation: none !important; }
-
-  /* Hero text: ensure name NEVER clips */
-  .hero-name {
-    font-size: clamp(1.5rem, 6.8vw, 2rem) !important;
-    line-height: 1.15 !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-  }
-  .hero-greeting { font-size: 0.88rem !important; margin-bottom: 0.2rem !important; }
-  /* Hide bio on mobile — it duplicates the About section */
-  .hero-bio { display: none !important; }
-  /* Hide empty typewriter line — it adds dead height on mobile */
-  .hero-role { display: none !important; }
-  .hero-badge { font-size: 0.72rem !important; margin-bottom: 0.9rem !important; }
-  .hero-role-tags { gap: 0.35rem !important; margin: 0.6rem 0 !important; }
-  .hero-role-tag { font-size: 0.72rem !important; padding: 0.18rem 0.6rem !important; }
-  .hero-cta { margin-top: 0.6rem !important; }
-  .hero-social { margin-top: 0.75rem !important; }
-
-  /* Stats strip: visually elevate it since floating cards are gone */
-  .hero-stats-strip { padding: 0 1.2rem 2rem !important; }
-  .hero-stats-grid {
-    background: rgba(13,27,74,0.05);
-    border: 1px solid rgba(232,0,122,0.15);
-    border-radius: 14px;
-    padding: 0.9rem 0.5rem !important;
-    gap: 0 !important;
-  }
-  .hero-stat { padding: 0.5rem 0.25rem !important; }
-  .hero-stat-num { font-size: 1.25rem !important; }
-  .hero-stat-lbl { font-size: 0.58rem !important; }
-}
-
-@media (max-width: 480px) {
-  .hero-inner { padding: 4.5rem 1rem 1rem !important; }
-  .hero-photo-ring { width: 180px !important; height: 235px !important; }
-  .hero-circle-ring { width: 170px !important; height: 170px !important; }
-  .hero-photo-inner { width: 260px !important; height: 420px !important; }
-  .hero-name { font-size: clamp(1.35rem, 6.5vw, 1.8rem) !important; }
-}
-
-/* ============================================================
-   EXPERIENCE CARDS — LAYOUT RECONSTRUCTION
-   Problems:
-   1. font-size:1.65rem title word-breaks mid-word on narrow mobile
-   2. Background image opacity:0.75 bleeds over text on mobile
-   3. Horizontal exp-head overflows narrow cards
-   ============================================================ */
-
-@media (max-width: 768px) {
-  /* Stack logo + role vertically so title never wraps incorrectly */
-  .exp-head-left { flex-direction: column !important; gap: 0.6rem !important; align-items: flex-start !important; }
-
-  /* Scale down role title — the #1 word-break cause */
-  .exp-role {
-    font-size: 1.15rem !important;
-    line-height: 1.25 !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-    hyphens: none !important;
-  }
-  .exp-co { font-size: 0.9rem !important; }
-
-  /* Make background image nearly invisible on mobile — text legibility first */
-  .exp-card > img[aria-hidden="true"] { opacity: 0.12 !important; }
-}
-
-@media (max-width: 640px) {
-  /* Override inline padding on exp-card */
-  .exp-card { padding: 1.4rem 1.2rem 1.4rem 1.4rem !important; min-height: unset !important; }
-
-  .exp-role { font-size: 1rem !important; }
-  .exp-co { font-size: 0.82rem !important; }
-  .exp-bullets { font-size: 0.85rem !important; line-height: 1.7 !important; }
-  .exp-bullets li { margin-bottom: 0.5rem !important; }
-
-  /* Logo: smaller on mobile */
-  .exp-logo-wrap {
-    width: 46px !important; height: 46px !important;
-    font-size: 0.5rem !important; line-height: 1.2 !important;
-    border-radius: 8px !important;
-  }
-
-  /* Date badge: tighter on mobile */
-  .exp-date { font-size: 0.78rem !important; padding: 0.35rem 0.75rem !important; }
-}
-
-/* ============================================================
-   PERFORMANCE — MOBILE GPU COST REDUCTION
-   Eliminates backdrop-filter, blur, complex shadows on mobile
-   where they cause jank and high Lighthouse penalty.
-   ============================================================ */
-
-@media (max-width: 768px) {
-  /* Remove backdrop-filter — worst GPU offender */
-  .hero-ai-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-  .exp-date { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-
-  /* Flatten card shadows on mobile — simpler compositing */
-  .card { box-shadow: 0 2px 16px rgba(13,27,74,0.12) !important; }
-  .card:hover { transform: none !important; box-shadow: 0 4px 20px rgba(13,27,74,0.16) !important; }
-  .award-card:hover { transform: translateY(-2px) !important; }
-
-  /* Disable parallax section on mobile — pure GPU waste */
-  .parallax { min-height: 80px !important; background-attachment: scroll !important; }
-}
-
-@media (max-width: 640px) {
-  /* Disable all scroll-triggered hover transforms — mobile has no hover */
-  .bio-photo:hover { transform: none !important; }
-  .bio-photo:hover img { transform: none !important; }
-  .pcard:hover { transform: none !important; }
-  .award-card:hover { transform: none !important; }
-  .c-item:hover { padding-left: 1.5rem !important; }
-  .parallax { display: none !important; }
-}
-
-/* ============================================================
-   EDUCATION CARDS — IMAGE PADDING FIX
-   ============================================================ */
-
-@media (max-width: 640px) {
-  /* Ensure the education image cards have proper border-radius */
-  .cards-row img { border-radius: 12px !important; }
-  /* Tighten the education label spacing */
-  .edu-section-label { margin: 1.75rem 0 1rem !important; font-size: 0.68rem !important; }
-}
-
-/* ============================================================
-   NAVBAR — MOBILE ENHANCEMENTS
-   ============================================================ */
-
-@media (max-width: 640px) {
-  /* Make mobile menu links larger and easier to tap */
-  .mobile-menu a {
-    font-size: 1rem !important;
-    padding: 0.9rem 0 !important;
-    min-height: 52px;
-    border-bottom: 1px solid rgba(232,0,122,0.1) !important;
-  }
-  /* Make the Resume link in mobile menu stand out */
-  .mobile-menu a[download] {
-    margin-top: 0.75rem;
-    color: var(--primary) !important;
-    font-weight: 700 !important;
-  }
-}
-
-/* ============================================================
-   CONTACT SECTION — GRID BORDER FIX ON MOBILE
-   Single column: remove right border from all items
-   ============================================================ */
-
-@media (max-width: 640px) {
-  .c-items { border-radius: 12px !important; }
-  .c-item { border-right: none !important; }
-  .c-item:last-child { border-bottom: none !important; }
-}
-
-/* ============================================================
-   PROJECT CARDS — MOBILE READING FIXES
-   ============================================================ */
-
-@media (max-width: 640px) {
-  .pcard-title { font-size: 1.1rem !important; line-height: 1.3 !important; word-break: normal !important; overflow-wrap: break-word !important; }
-  .pcard-desc { font-size: 0.82rem !important; line-height: 1.65 !important; }
-  .pcard-cat { font-size: 0.68rem !important; }
-  .pcard-actions { gap: 0.6rem !important; }
-  .pcard-actions a { font-size: 0.78rem !important; padding: 0.5rem 0.9rem !important; min-height: 40px !important; display: flex !important; align-items: center !important; }
-}
-
-/* ============================================================
-   AWARDS SECTION — MOBILE POLISH
-   ============================================================ */
-
-@media (max-width: 640px) {
-  .award-card { padding: 1.1rem 1rem !important; }
-  .award-title { font-size: 0.88rem !important; line-height: 1.35 !important; }
-  .card-subtitle { font-size: 0.72rem !important; }
-}
-
-/* ============================================================
-   RESEARCH SECTION — MOBILE READABILITY
-   ============================================================ */
-
-@media (max-width: 640px) {
-  .res-card h3 { font-size: 0.9rem !important; line-height: 1.4 !important; word-break: normal !important; overflow-wrap: break-word !important; }
-  .res-card p { font-size: 0.82rem !important; line-height: 1.65 !important; }
-}
-
-/* ============================================================
-   SCROLL PROGRESS + MOBILE MENU — POLISH
-   ============================================================ */
-
-/* Ensure scroll progress bar renders above everything */
-#scroll-progress { z-index: 9999 !important; }
-
-/* Mobile menu overlay: tighten for small screens */
-@media (max-width: 360px) {
-  .mobile-menu { width: 100% !important; }
-}
