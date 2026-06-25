@@ -2082,14 +2082,8 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
 
   /* Shrink the photo ring to a reasonable mobile size */
   .hero-photo-ring { width: 210px !important; height: 270px !important; }
-  .hero-circle-ring {
-    width: 420px !important; height: 420px !important;
-    bottom: 15px !important;
-  }
-  .hero-photo-inner {
-    width: 300px !important; height: 480px !important;
-    bottom: 25px !important;
-  }
+  .hero-circle-ring { width: 240px !important; height: 240px !important; bottom: 15px !important; }
+  .hero-photo-inner { width: 180px !important; height: 260px !important; bottom: 20px !important; }
 
   /* Hide ALL floating AI cards — they collide on mobile.
      Stats strip already shows the same info below the hero. */
@@ -2140,8 +2134,8 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
 @media (max-width: 480px) {
   .hero-inner { padding: 4.5rem 1rem 1rem !important; }
   .hero-photo-ring { width: 180px !important; height: 235px !important; }
-  .hero-circle-ring { width: 170px !important; height: 170px !important; }
-  .hero-photo-inner { width: 260px !important; height: 420px !important; }
+  .hero-circle-ring { width: 200px !important; height: 200px !important; }
+  .hero-photo-inner { width: 160px !important; height: 230px !important; }
   .hero-name { font-size: clamp(1.35rem, 6.5vw, 1.8rem) !important; }
 }
 
@@ -2355,4 +2349,41 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
 }
 @media (max-width: 480px) {
   #projects .inner, #awards .inner { padding: 0 1.2rem; }
+}
+
+/* ── HERO at 960px single-column: the original rule uses 8rem top padding,
+   full-size 57px name, and no photo-ring constraint — CTA ends up below fold.
+   These overrides bring everything into the viewport. ── */
+@media (max-width: 960px) {
+  .hero-inner { padding: 4.5rem 2rem 1.5rem !important; gap: 0.75rem !important; }
+  .hero-name { font-size: clamp(2rem, 3.8vw, 3rem) !important; line-height: 1.1 !important; }
+  .hero-photo-ring { width: 240px !important; height: 300px !important; }
+  /* hero-bio is long prose that adds ~120px of dead height at single-column */
+  .hero-bio { display: none !important; }
+}
+
+/* ── HERO: fill the gap between 768px and 960px breakpoints.
+   At this range, hero is single-column (from ≤960px rule) but
+   the circle-ring has no override — stays at 450px default which
+   dominates the screen and pushes name off the bottom.
+   This rule must come LAST so it wins over all earlier breakpoints. ── */
+@media (max-width: 960px) {
+  .hero-circle-ring { width: 300px !important; height: 300px !important; }
+  .hero-photo-inner { width: 200px !important; height: 290px !important; }
+}
+/* These narrower rules further reduce sizes and override the 960px above */
+@media (max-width: 768px) {
+  .hero-circle-ring { width: 250px !important; height: 250px !important; }
+  .hero-photo-inner { width: 185px !important; height: 275px !important; }
+  .hero-photo-ring { width: 220px !important; height: 280px !important; }
+}
+@media (max-width: 640px) {
+  .hero-circle-ring { width: 230px !important; height: 230px !important; }
+  .hero-photo-inner { width: 170px !important; height: 255px !important; }
+  .hero-photo-ring { width: 205px !important; height: 265px !important; }
+}
+@media (max-width: 480px) {
+  .hero-circle-ring { width: 200px !important; height: 200px !important; }
+  .hero-photo-inner { width: 155px !important; height: 230px !important; }
+  .hero-photo-ring { width: 185px !important; height: 235px !important; }
 }
