@@ -2393,3 +2393,271 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
   .hero-photo-inner { width: 175px !important; height: 175px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 28px !important; -webkit-mask-image: none !important; mask-image: none !important; }
   .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; transform: scale(2) !important; transform-origin: center bottom !important; }
 }
+
+/* ============================================================
+   MOBILE REDESIGN — FINAL COMPREHENSIVE PASS
+   ─────────────────────────────────────────────────────────────
+   IMAGE MATH (title_imag.png = 738×1600px RGBA):
+   • cover-scales by width → rendered h = 1600×(S/738) = 2.168×S
+   • Person content starts at y=486px (30.4%) → face at ~560px (35%)
+   • Rendered face y = 560×(S/738) = 0.759×S
+   • Overflow = 1.168×S
+   • To center face at 0.5×S: crop = 0.259×S → Y% = 22.2%
+   • object-position: center 22%  ←  works at ALL circle sizes
+   • scale(1.4) from center center  →  headshot zoom, face stays centered
+   • Previous scale(2)+transform-origin:bottom was WRONG → pushed face above clip
+   ─────────────────────────────────────────────────────────────
+   Preserves desktop (>960px) unchanged.
+   ============================================================ */
+
+/* ── 1. HERO LAYOUT: flex column, photo first ── */
+@media (max-width: 960px) {
+  #home { overflow-x: hidden; }
+
+  .hero-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: clamp(60px, 10dvh, 80px) clamp(16px, 5vw, 28px) 32px !important;
+    gap: 24px !important;
+    grid-template-columns: none !important;
+    min-height: unset !important;
+  }
+
+  .hero-right {
+    order: -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+    height: auto !important;
+    min-height: unset !important;
+  }
+
+  .hero-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: min(520px, 100%) !important;
+  }
+}
+
+/* ── 2. PROFILE RING: clamp-based responsive sizing ── */
+/* clamp(min, preferred, max): 200px small → 270px tablet */
+@media (max-width: 960px) {
+  .hero-photo-ring {
+    position: relative !important;
+    width: clamp(210px, 47vw, 290px) !important;
+    height: clamp(255px, 57vw, 350px) !important;
+    flex-shrink: 0 !important;
+    overflow: visible !important;
+    margin: 0 !important;
+  }
+
+  .hero-circle-ring {
+    width: clamp(200px, 44vw, 270px) !important;
+    height: clamp(200px, 44vw, 270px) !important;
+    bottom: clamp(16px, 3.5vw, 26px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* ── 3. PROFILE PHOTO — CORRECTED FACE CENTERING ── */
+/* photo-inner = same clamp as circle, circular clip, no fade mask */
+@media (max-width: 960px) {
+  .hero-photo-inner {
+    position: absolute !important;
+    width: clamp(188px, 42vw, 255px) !important;
+    height: clamp(188px, 42vw, 255px) !important;
+    bottom: clamp(18px, 3.8vw, 28px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    z-index: 5 !important;
+  }
+
+  /* title_imag.png: 738×1600 RGBA.
+     object-position center 22% places face at visual center of circle.
+     scale(1.4) from center zooms to headshot — face stays centered. */
+  .hero-photo-inner img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center 22% !important;
+    transform: scale(1.4) !important;
+    transform-origin: center center !important;
+    filter: none !important;
+  }
+}
+
+/* ── 4. DECORATIVE ELEMENTS: hide on mobile for performance ── */
+@media (max-width: 960px) {
+  .hero-ai-canvas { display: none !important; }
+  [class*="hero-ai-card"] { display: none !important; }
+  .hero-avail-badge { display: none !important; }
+  .hero-particles { display: none !important; }
+  .hero-photo-ring::before,
+  .hero-photo-ring::after { display: none !important; }
+  .hero-circle-ring::before { animation: none !important; }
+  #home::before { display: none !important; }
+}
+
+/* ── 5. AVAILABILITY BADGE ── */
+@media (max-width: 960px) {
+  .hero-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: clamp(0.7rem, 2.2vw, 0.82rem) !important;
+    padding: 6px 16px !important;
+    border-radius: 100px !important;
+    margin-bottom: 12px !important;
+    white-space: nowrap !important;
+    align-self: center !important;
+  }
+}
+
+/* ── 6. TYPOGRAPHY: clamp-based fluid scaling ── */
+@media (max-width: 960px) {
+  .hero-greeting {
+    font-size: clamp(0.85rem, 2.5vw, 1rem) !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+  }
+
+  /* Name: 28px (375px) → 40px (768px) via clamp */
+  .hero-name {
+    font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.5px !important;
+    margin-bottom: 8px !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Description hidden (saves height); role tags remain */
+  .hero-bio { display: none !important; }
+  .hero-role { display: none !important; }
+
+  .hero-role-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    margin: 8px 0 12px !important;
+  }
+
+  .hero-role-tag {
+    font-size: clamp(0.65rem, 1.8vw, 0.78rem) !important;
+    padding: 4px 10px !important;
+    border-radius: 100px !important;
+  }
+}
+
+/* ── 7. CTA BUTTONS: stacked, full-width, 48px touch target ── */
+@media (max-width: 960px) {
+  .hero-cta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+    width: 100% !important;
+  }
+
+  .btn-pill-solid,
+  .btn-pill-outline {
+    width: min(280px, 90%) !important;
+    min-height: 48px !important;
+    justify-content: center !important;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem) !important;
+    border-radius: 100px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+/* ── 8. SOCIAL LINKS: 44×44px touch targets ── */
+@media (max-width: 960px) {
+  .hero-social {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-top: 16px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hero-social-link {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ── 9. STATS STRIP: compact on mobile ── */
+@media (max-width: 960px) {
+  .hero-stat-num { font-size: clamp(1.1rem, 3.5vw, 1.4rem) !important; }
+  .hero-stat-lbl { font-size: clamp(0.55rem, 1.5vw, 0.65rem) !important; }
+}
+
+/* ── 10. NAV: 44px touch targets, aligned hamburger ── */
+@media (max-width: 960px) {
+  .hamburger {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* ── 11. SMALL MOBILE (≤380px): tighten further ── */
+@media (max-width: 380px) {
+  .hero-inner {
+    padding: 56px 14px 24px !important;
+    gap: 18px !important;
+  }
+
+  .hero-name {
+    font-size: clamp(1.6rem, 8vw, 1.9rem) !important;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem !important;
+    padding: 5px 12px !important;
+  }
+
+  .hero-photo-ring {
+    width: clamp(190px, 52vw, 220px) !important;
+    height: clamp(230px, 63vw, 270px) !important;
+  }
+
+  .hero-circle-ring {
+    width: clamp(180px, 49vw, 210px) !important;
+    height: clamp(180px, 49vw, 210px) !important;
+  }
+
+  .hero-photo-inner {
+    width: clamp(168px, 46vw, 198px) !important;
+    height: clamp(168px, 46vw, 198px) !important;
+  }
+}
+
+/* ── 12. NO HORIZONTAL SCROLL: catch-all ── */
+@media (max-width: 960px) {
+  #home, #home * { max-width: 100%; box-sizing: border-box; }
+  .hero-inner, .hero-left, .hero-right { overflow: visible !important; }
+}
