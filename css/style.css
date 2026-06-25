@@ -2484,17 +2484,19 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
     z-index: 5 !important;
   }
 
-  /* title_imag.png: 738×1600 RGBA.
-     object-position center 22% places face at visual center of circle.
-     scale(1.4) from center zooms to headshot — face stays centered. */
+  /* title_imag.png: 738×1600 RGBA — transparent-bg standing portrait.
+     Person content: y=486–1170 (30.4–73.1% of image height).
+     cover scales by width → rendered h = 2.168×container.
+     object-position: center 50% shows head at 7.5% from top,
+     full portrait (head→feet) fills the circle — no zoom needed.
+     No scale transform: shows the complete standing portrait like the reference designs. */
   .hero-photo-inner img {
     width: 100% !important;
     height: 100% !important;
     display: block !important;
     object-fit: cover !important;
-    object-position: center 22% !important;
-    transform: scale(1.4) !important;
-    transform-origin: center center !important;
+    object-position: center 50% !important;
+    transform: none !important;
     filter: none !important;
   }
 }
