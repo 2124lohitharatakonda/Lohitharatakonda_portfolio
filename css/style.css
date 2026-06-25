@@ -2369,21 +2369,24 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
    This rule must come LAST so it wins over all earlier breakpoints. ── */
 @media (max-width: 960px) {
   .hero-circle-ring { width: 300px !important; height: 300px !important; }
-  .hero-photo-inner { width: 200px !important; height: 290px !important; }
+  .hero-photo-inner { width: 280px !important; height: 280px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 10px !important; -webkit-mask-image: none !important; mask-image: none !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
 }
-/* These narrower rules further reduce sizes and override the 960px above */
 @media (max-width: 768px) {
   .hero-circle-ring { width: 250px !important; height: 250px !important; }
-  .hero-photo-inner { width: 185px !important; height: 275px !important; }
   .hero-photo-ring { width: 220px !important; height: 280px !important; }
+  .hero-photo-inner { width: 230px !important; height: 230px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 25px !important; -webkit-mask-image: none !important; mask-image: none !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
 }
 @media (max-width: 640px) {
-  .hero-circle-ring { width: 230px !important; height: 230px !important; }
-  .hero-photo-inner { width: 170px !important; height: 255px !important; }
-  .hero-photo-ring { width: 205px !important; height: 265px !important; }
+  .hero-circle-ring { width: 210px !important; height: 210px !important; }
+  .hero-photo-ring { width: 200px !important; height: 250px !important; }
+  .hero-photo-inner { width: 195px !important; height: 195px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 30px !important; -webkit-mask-image: none !important; mask-image: none !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
 }
 @media (max-width: 480px) {
-  .hero-circle-ring { width: 200px !important; height: 200px !important; }
-  .hero-photo-inner { width: 155px !important; height: 230px !important; }
-  .hero-photo-ring { width: 185px !important; height: 235px !important; }
+  .hero-circle-ring { width: 190px !important; height: 190px !important; }
+  .hero-photo-ring { width: 185px !important; height: 230px !important; }
+  .hero-photo-inner { width: 175px !important; height: 175px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 28px !important; -webkit-mask-image: none !important; mask-image: none !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
 }
