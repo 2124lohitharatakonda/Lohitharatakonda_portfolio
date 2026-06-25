@@ -2367,26 +2367,29 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
    the circle-ring has no override — stays at 450px default which
    dominates the screen and pushes name off the bottom.
    This rule must come LAST so it wins over all earlier breakpoints. ── */
+/* Photo-inner: circular crop, face centered via scale(2) + transform-origin bottom.
+   Face is at ~75% of the portrait image. With scale(2) anchored at bottom,
+   the face maps to 50% (center) of the clipped circle. overflow:hidden clips it. */
 @media (max-width: 960px) {
   .hero-circle-ring { width: 300px !important; height: 300px !important; }
   .hero-photo-inner { width: 280px !important; height: 280px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 10px !important; -webkit-mask-image: none !important; mask-image: none !important; }
-  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; transform: scale(2) !important; transform-origin: center bottom !important; }
 }
 @media (max-width: 768px) {
   .hero-circle-ring { width: 250px !important; height: 250px !important; }
   .hero-photo-ring { width: 220px !important; height: 280px !important; }
   .hero-photo-inner { width: 230px !important; height: 230px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 25px !important; -webkit-mask-image: none !important; mask-image: none !important; }
-  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; transform: scale(2) !important; transform-origin: center bottom !important; }
 }
 @media (max-width: 640px) {
   .hero-circle-ring { width: 210px !important; height: 210px !important; }
   .hero-photo-ring { width: 200px !important; height: 250px !important; }
   .hero-photo-inner { width: 195px !important; height: 195px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 30px !important; -webkit-mask-image: none !important; mask-image: none !important; }
-  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; transform: scale(2) !important; transform-origin: center bottom !important; }
 }
 @media (max-width: 480px) {
   .hero-circle-ring { width: 190px !important; height: 190px !important; }
   .hero-photo-ring { width: 185px !important; height: 230px !important; }
   .hero-photo-inner { width: 175px !important; height: 175px !important; border-radius: 50% !important; overflow: hidden !important; bottom: 28px !important; -webkit-mask-image: none !important; mask-image: none !important; }
-  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; }
+  .hero-photo-inner img { object-fit: cover !important; object-position: top center !important; transform: scale(2) !important; transform-origin: center bottom !important; }
 }
