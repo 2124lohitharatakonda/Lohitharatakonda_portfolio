@@ -1738,10 +1738,10 @@ a.edu-link:hover { color: var(--primary); }
 
 /* ── Projects ── */
 #projects { background: var(--bg); }
-#projects .inner { max-width: 1440px; padding: 0 2rem; }
+#projects .inner { max-width: var(--inner); padding: 0 3.5rem; }
 
 /* ── Awards ── */
-#awards .inner { max-width: 1440px; padding: 0 2rem; }
+#awards .inner { max-width: var(--inner); padding: 0 3.5rem; }
 #awards .card .card-title { color: var(--pt); font-size: 1.08rem; font-weight: 700; margin-bottom: 0.3rem; }
 #awards .card .card-body { color: var(--pt3); font-size: 0.9rem; line-height: 1.7; }
 .award-card .card-subtitle { font-size: 0.8rem; color: var(--primary); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1rem; }
@@ -2014,7 +2014,7 @@ footer { background: #fff; border-top-color: rgba(0,0,0,0.07); }
 }
 
 @media (max-width: 480px) {
-  #projects .inner, #awards .inner { padding: 0 1rem; }
+  #projects .inner, #awards .inner { padding: 0 1.2rem; }
   .pcard-right { height: 220px !important; }
   .pcard-left { padding: 1.2rem 1rem; }
   /* Contact item padding already set above at 640px; shrink icon further */
@@ -2028,7 +2028,8 @@ footer { background: #fff; border-top-color: rgba(0,0,0,0.07); }
 .mobile-menu .nav-links-mobile { padding: 0 1.2rem; }
 
 /* 4. All images constrained (belt-and-suspenders) */
-.cards-row img, .bio-row img, .res-card img,
+/* NOTE: bio-row img is excluded here — it needs explicit height control via .bio-photo img rules */
+.cards-row img, .res-card img,
 .award-card img, .pcard img { max-width: 100%; height: auto; }
 
 /* ============================================================
@@ -2303,4 +2304,55 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
 /* Mobile menu overlay: tighten for small screens */
 @media (max-width: 360px) {
   .mobile-menu { width: 100% !important; }
+}
+
+/* ============================================================
+   ALIGNMENT + LAYOUT FIXES — PASS 2
+   Root-cause fixes for tablet bio-photo, img height override,
+   hero tablet sizing, and section padding consistency.
+   ============================================================ */
+
+/* ── Bio-photo: JS scroll animation applies translateX(-40px) as
+   the entrance starting position. At single-column layout (≤960px)
+   the photo is full-width with no room to slide, causing 40px
+   left overflow. Override to keep the photo in bounds. ── */
+@media (max-width: 960px) {
+  .bio-photo { transform: none !important; }
+}
+
+/* ── Bio-photo img: restore explicit height control.
+   The global .bio-row img rule (height:auto) was overriding
+   .bio-photo img height values because it came later in the
+   cascade at equal specificity. Use !important to restore. ── */
+@media (max-width: 960px) {
+  .bio-photo { max-width: 100% !important; width: 100% !important; }
+  .bio-photo img { height: 380px !important; object-position: center 35% !important; }
+}
+@media (max-width: 640px) {
+  .bio-photo { max-width: 320px !important; margin: 0 auto !important; }
+  .bio-photo img { height: 260px !important; object-position: center 35% !important; }
+}
+
+/* ── Hero: tablet (768px) top padding is 8rem from the 960px rule,
+   pushing content too far down on 1024px height screens.
+   Reduce to 5rem and shrink photo ring to reclaim vertical space. ── */
+@media (max-width: 768px) {
+  .hero-inner { padding: 5rem 2rem 2rem !important; gap: 1rem !important; }
+  .hero-photo-ring { width: 220px !important; height: 280px !important; }
+  .hero-circle-ring { width: 210px !important; height: 210px !important; }
+  .hero-photo-inner { width: 180px !important; height: 270px !important; }
+  .hero-name { font-size: clamp(1.8rem, 4.5vw, 2.6rem) !important; }
+}
+
+/* ── Projects/Awards inner: mirror the default .inner padding at
+   960px and 640px breakpoints so all sections share the same
+   horizontal rhythm. Desktop is fixed via rule at line 1741. ── */
+@media (max-width: 960px) {
+  #projects .inner, #awards .inner { padding: 0 2rem; }
+}
+@media (max-width: 640px) {
+  #projects .inner, #awards .inner { padding: 0 1.2rem; }
+}
+@media (max-width: 480px) {
+  #projects .inner, #awards .inner { padding: 0 1.2rem; }
 }
