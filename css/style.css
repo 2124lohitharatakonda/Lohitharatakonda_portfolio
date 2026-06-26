@@ -2467,39 +2467,61 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
   }
 }
 
-/* ── 3. PROFILE PHOTO — CORRECTED FACE CENTERING ── */
-/* photo-inner = same clamp as circle, circular clip, no fade mask */
+/* ── 3. PROFILE PHOTO — POP-OUT DESIGN (matches desktop screenshot) ── */
+/*
+  Desktop: photo-inner = 500×1050px, bottom: -175px, object-fit: contain.
+  The person pops out above the gradient circle — face visible above ring top.
+  Mobile: same design scaled proportionally to the smaller ring.
+
+  Desktop ratios (from original CSS):
+    photo-inner w / photo-ring w = 500/420 = 1.190
+    photo-inner h / photo-ring h = 1050/540 = 1.944
+    bottom offset / photo-ring h  = -175/540 = -0.324
+
+  At mobile photo-ring = clamp(210px,47vw,290px) × clamp(255px,57vw,350px):
+    photo-inner w  = ring-w × 1.19  ≈ clamp(250px, 56vw, 345px)
+    photo-inner h  = ring-h × 1.944 ≈ clamp(496px, 111vw, 680px)
+    bottom         = ring-h × -0.324 ≈ clamp(-83px, -18vw, -114px)
+
+  hero-right gets padding-top so the upward overflow (face/head) stays
+  within the hero section and well below the fixed nav.
+*/
 @media (max-width: 960px) {
-  .hero-photo-inner {
-    position: absolute !important;
-    width: clamp(188px, 42vw, 255px) !important;
-    height: clamp(188px, 42vw, 255px) !important;
-    bottom: clamp(18px, 3.8vw, 28px) !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
-    z-index: 5 !important;
+  /* Extra top space in hero-right so the head that overflows upward is visible */
+  .hero-right {
+    padding-top: clamp(130px, 34vw, 200px) !important;
+    align-items: flex-start !important;
   }
 
-  /* title_imag.png: 738×1600 RGBA — transparent-bg standing portrait.
-     Person content: y=486–1170 (30.4–73.1%). Cover scales by width.
-     Rendered face at ~131px in a 200px element (overflow=233px).
-     object-position center 33% shifts crop so face lands at element row ~54px.
-     scale(1.8) from center makes visible window = element rows 44–156px,
-     so face appears at 54–44 = 10px from circle top (top ~10%).
-     Body visible to waist (~54% of person). Matches reference portrait style. */
+  .hero-photo-inner {
+    position: absolute !important;
+    /* 1.19× the ring width */
+    width: clamp(250px, 56vw, 345px) !important;
+    max-width: none !important;   /* override catch-all #home * { max-width:100% } */
+    /* 1.944× the ring height */
+    height: clamp(496px, 111vw, 680px) !important;
+    /* -0.324× ring height — extends below ring bottom */
+    bottom: clamp(-83px, -18vw, -114px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    /* NO circular crop — same as desktop pop-out */
+    border-radius: 0 !important;
+    overflow: visible !important;
+    /* Subtle bottom fade, same as desktop */
+    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, black 72%, transparent 100%) !important;
+    z-index: 8 !important;
+  }
+
+  /* Restore desktop image settings exactly */
   .hero-photo-inner img {
     width: 100% !important;
     height: 100% !important;
     display: block !important;
-    object-fit: cover !important;
-    object-position: center 33% !important;
-    transform: scale(1.8) !important;
-    transform-origin: center center !important;
-    filter: none !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    transform: none !important;
+    filter: drop-shadow(0 -8px 24px rgba(232, 0, 122, 0.22)) !important;
   }
 }
 
@@ -2644,6 +2666,7 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
     padding: 5px 12px !important;
   }
 
+  /* Ring slightly smaller on very small screens */
   .hero-photo-ring {
     width: clamp(190px, 52vw, 220px) !important;
     height: clamp(230px, 63vw, 270px) !important;
@@ -2654,9 +2677,15 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
     height: clamp(180px, 49vw, 210px) !important;
   }
 
+  /* Pop-out photo-inner — proportional to smaller ring (1.19w × 1.944h) */
+  /* ring ≈ 195×236px at 375px → photo-inner ≈ 232×459px, bottom ≈ -76px */
   .hero-photo-inner {
-    width: clamp(168px, 46vw, 198px) !important;
-    height: clamp(168px, 46vw, 198px) !important;
+    width: clamp(225px, 62vw, 262px) !important;
+    max-width: none !important;
+    height: clamp(448px, 120vw, 525px) !important;
+    bottom: clamp(-76px, -20vw, -88px) !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
   }
 }
 
