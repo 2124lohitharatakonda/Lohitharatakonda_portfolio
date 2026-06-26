@@ -1729,11 +1729,9 @@ a.edu-link:hover { color: var(--primary); }
 }
 .exp-card > div[style*="linear-gradient(to right"] {
   background: linear-gradient(to right,
-    rgba(255,235,245,0.99) 0%,
-    rgba(255,240,248,0.98) 50%,
-    rgba(255,245,250,0.88) 65%,
-    rgba(255,250,252,0.50) 80%,
-    rgba(255,255,255,0.0) 100%) !important;
+    rgba(8,15,36,0.97) 0%,
+    rgba(8,15,36,0.92) 52%,
+    rgba(8,15,36,0.12) 100%) !important;
 }
 
 /* ── Projects ── */
