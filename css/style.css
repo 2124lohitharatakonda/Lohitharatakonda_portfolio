@@ -2419,7 +2419,7 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    padding: clamp(60px, 10dvh, 80px) clamp(16px, 5vw, 28px) 32px !important;
+    padding: clamp(72px, 8dvh, 90px) clamp(16px, 5vw, 28px) 32px !important;
     gap: 24px !important;
     grid-template-columns: none !important;
     min-height: unset !important;
@@ -2487,41 +2487,38 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
   within the hero section and well below the fixed nav.
 */
 @media (max-width: 960px) {
-  /* Extra top space in hero-right so the head that overflows upward is visible */
+  /* No extra top padding — circular portrait sits inside ring */
   .hero-right {
-    padding-top: clamp(130px, 34vw, 200px) !important;
-    align-items: flex-start !important;
+    padding-top: 0 !important;
+    align-items: center !important;
   }
 
+  /* Circular portrait — matches the ring size on mobile */
   .hero-photo-inner {
     position: absolute !important;
-    /* 1.19× the ring width */
-    width: clamp(250px, 56vw, 345px) !important;
-    max-width: none !important;   /* override catch-all #home * { max-width:100% } */
-    /* 1.944× the ring height */
-    height: clamp(496px, 111vw, 680px) !important;
-    /* -0.324× ring height — extends below ring bottom */
-    bottom: clamp(-83px, -18vw, -114px) !important;
+    width: clamp(200px, 44vw, 270px) !important;
+    height: clamp(200px, 44vw, 270px) !important;
+    max-width: none !important;
+    bottom: clamp(16px, 3.5vw, 26px) !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    /* NO circular crop — same as desktop pop-out */
-    border-radius: 0 !important;
-    overflow: visible !important;
-    /* Subtle bottom fade, same as desktop */
-    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%) !important;
-    mask-image: linear-gradient(to bottom, black 72%, transparent 100%) !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
     z-index: 8 !important;
+    box-shadow: 0 0 0 4px rgba(232,0,122,0.30) !important;
   }
 
-  /* Restore desktop image settings exactly */
   .hero-photo-inner img {
     width: 100% !important;
     height: 100% !important;
     display: block !important;
-    object-fit: contain !important;
-    object-position: bottom center !important;
-    transform: none !important;
-    filter: drop-shadow(0 -8px 24px rgba(232, 0, 122, 0.22)) !important;
+    object-fit: cover !important;
+    object-position: center 18% !important;
+    transform: scale(1.25) !important;
+    transform-origin: center top !important;
+    filter: none !important;
   }
 }
 
@@ -2677,15 +2674,14 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
     height: clamp(180px, 49vw, 210px) !important;
   }
 
-  /* Pop-out photo-inner — proportional to smaller ring (1.19w × 1.944h) */
-  /* ring ≈ 195×236px at 375px → photo-inner ≈ 232×459px, bottom ≈ -76px */
+  /* Circular portrait — sized to match smaller ring at ≤380px */
   .hero-photo-inner {
-    width: clamp(225px, 62vw, 262px) !important;
+    width: clamp(178px, 48vw, 198px) !important;
+    height: clamp(178px, 48vw, 198px) !important;
     max-width: none !important;
-    height: clamp(448px, 120vw, 525px) !important;
-    bottom: clamp(-76px, -20vw, -88px) !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
+    bottom: clamp(12px, 2.5vw, 18px) !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
   }
 }
 
