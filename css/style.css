@@ -9,53 +9,53 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---- TOKENS ---- */
 :root {
-  /* Page backgrounds — light */
-  --bg:        #ffffff;
-  --bg2:       #f5f7ff;
-  --bg3:       #eef1ff;
-  --card:      #0d1b4a;   /* dark navy cards for visual punch */
-  --card-h:    #122268;
-  --card-b:    rgba(255,255,255,0.06);
+  /* Page backgrounds — DARK NAVY (site-wide) */
+  --bg:        #080f24;   /* primary dark — same as hero */
+  --bg2:       #0a1228;   /* alternating sections — subtle step */
+  --bg3:       #0d1530;   /* card / tertiary surface */
+  --card:      #0f1d40;   /* raised card surface */
+  --card-h:    #162356;   /* card hover */
+  --card-b:    rgba(255,255,255,0.05);
 
   /* Accent palette */
   --primary:   #e8007a;   /* hot pink */
   --primary-d: #c4006a;
-  --primary-lt: rgba(232,0,122,0.10);
-  --cyan:      #1a56ff;   /* electric blue replaces cyan */
-  --cyan-lt:   rgba(26,86,255,0.10);
+  --primary-lt: rgba(232,0,122,0.12);
+  --cyan:      #1a56ff;   /* electric blue */
+  --cyan-lt:   rgba(26,86,255,0.12);
   --accent:    #7c3aed;
   --green:     #22c55e;
 
-  /* Card text (on dark navy cards — stays light) */
+  /* Text — light on dark */
   --text:      #e8f0fe;
   --text-2:    #b0c6e8;
   --text-3:    #7a9ccc;
   --text-4:    #4a6ca0;
 
-  /* Page text (on white/light sections) */
-  --pt:        #0a0f1e;   /* near-black heading */
-  --pt2:       #1a1f36;   /* body — very dark navy */
-  --pt3:       #2d3555;   /* muted — still dark */
-  --pt4:       #4a5270;   /* very muted */
+  /* Page text — also light (whole site is dark now) */
+  --pt:        #e8f0fe;   /* headings — near-white */
+  --pt2:       #b0c6e8;   /* body */
+  --pt3:       #7a9ccc;   /* muted */
+  --pt4:       #4a6ca0;   /* very muted */
 
   /* Borders */
-  --border:    rgba(255,255,255,0.07);         /* on dark cards */
-  --border-p:  rgba(0,0,0,0.07);              /* on light page */
-  --border-b:  rgba(232,0,122,0.22);          /* pink accent border */
-  --border-bh: rgba(232,0,122,0.55);
+  --border:    rgba(255,255,255,0.08);
+  --border-p:  rgba(255,255,255,0.08);   /* was rgba(0,0,0,0.07) — flip for dark bg */
+  --border-b:  rgba(232,0,122,0.28);
+  --border-bh: rgba(232,0,122,0.60);
 
   /* Shadows */
-  --sh-sm:  0 2px 10px rgba(13,27,74,0.08);
-  --sh-md:  0 4px 24px rgba(13,27,74,0.12);
-  --sh-lg:  0 8px 40px rgba(13,27,74,0.16);
-  --sh-blue: 0 4px 28px rgba(232,0,122,0.30);
-  --sh-cyan: 0 4px 28px rgba(26,86,255,0.22);
+  --sh-sm:  0 2px 10px rgba(0,0,0,0.30);
+  --sh-md:  0 4px 24px rgba(0,0,0,0.40);
+  --sh-lg:  0 8px 40px rgba(0,0,0,0.50);
+  --sh-blue: 0 4px 28px rgba(232,0,122,0.35);
+  --sh-cyan: 0 4px 28px rgba(26,86,255,0.28);
 
   /* Gradients — pink → blue */
   --grad:    linear-gradient(135deg, #e8007a 0%, #1a56ff 100%);
   --grad-v:  linear-gradient(180deg, #e8007a 0%, #1a56ff 100%);
   --grad-r:  linear-gradient(135deg, #1a56ff 0%, #e8007a 100%);
-  --grad-d:  linear-gradient(135deg, rgba(232,0,122,0.06), rgba(26,86,255,0.04));
+  --grad-d:  linear-gradient(135deg, rgba(232,0,122,0.10), rgba(26,86,255,0.08));
 
   --r:     12px;
   --inner: 1200px;
@@ -2663,3 +2663,201 @@ a:focus-visible, button:focus-visible { outline-color: var(--primary); }
   #home, #home * { max-width: 100%; box-sizing: border-box; }
   .hero-inner, .hero-left, .hero-right { overflow: visible !important; }
 }
+
+/* ============================================================
+   DARK SITE THEME — GLOBAL OVERRIDES
+   Converts every remaining white/light surface to dark navy.
+   The :root token flip handles most cases; this block cleans up
+   all hardcoded #fff / rgba(255,255,255,...) / light values.
+   ============================================================ */
+
+/* ── Body & base ── */
+body { background: var(--bg) !important; color: var(--text-2) !important; }
+
+/* ── Navigation ── */
+#nav {
+  background: rgba(8, 15, 36, 0.85) !important;
+  border-bottom-color: rgba(232,0,122,0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+#nav.scrolled {
+  background: rgba(8, 15, 36, 0.97) !important;
+  border-bottom-color: rgba(232,0,122,0.25) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.5) !important;
+}
+.nav-logo { color: var(--text) !important; }
+.nav-links a { color: var(--text-3) !important; }
+.nav-links a:hover, .nav-links a.active { color: var(--text) !important; }
+.hamburger span { background: var(--text-3) !important; }
+
+/* Mobile menu */
+.mobile-menu {
+  background: #0a1228 !important;
+  border-left-color: rgba(232,0,122,0.25) !important;
+}
+.mobile-menu a { color: var(--text-3) !important; border-bottom-color: rgba(255,255,255,0.06) !important; }
+.mobile-menu a:hover { color: var(--primary) !important; }
+
+/* ── All section backgrounds ── */
+#about, #skills, #experience, #projects, #awards, #research, #contact, footer {
+  background: var(--bg) !important;
+}
+/* Alternating sections get a subtle step */
+#about, #experience, #contact { background: var(--bg2) !important; }
+
+/* Section headings & body text */
+h1, h2, h3, h4, h5, h6 { color: var(--text) !important; }
+p, li, span, label { color: inherit; }
+.section-tag { color: var(--primary) !important; }
+.section-title { color: var(--text) !important; }
+.section-sub { color: var(--text-3) !important; }
+
+/* ── Skills cards ── */
+#skills .card,
+#skills .card:hover,
+.skill-card,
+.skill-item {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+}
+#skills .card:hover {
+  background: var(--card-h) !important;
+  border-color: var(--border-b) !important;
+}
+.skill-name, .skill-percent { color: var(--text) !important; }
+.skill-bar-bg { background: rgba(255,255,255,0.08) !important; }
+
+/* ── Cert badges ── */
+.cert-badge-item {
+  background: var(--card) !important;
+  border-color: rgba(26,86,255,0.20) !important;
+  color: var(--text-2) !important;
+}
+
+/* ── Experience timeline ── */
+.exp-card, .timeline-item, .exp-block {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+}
+.exp-role, .exp-company { color: var(--text) !important; }
+.exp-period, .exp-location { color: var(--text-3) !important; }
+.exp-logo-wrap {
+  background: var(--card) !important;
+  border-color: rgba(232,0,122,0.20) !important;
+}
+.exp-logo--senecio {
+  background: var(--card) !important;
+  color: var(--cyan) !important;
+  border-color: rgba(26,86,255,0.25) !important;
+}
+
+/* ── Project cards ── */
+.pcard, .proj-card, .project-card {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.pcard:hover, .proj-card:hover {
+  background: var(--card-h) !important;
+  border-color: var(--border-b) !important;
+}
+.pcard-title, .proj-title { color: var(--text) !important; }
+.pcard-desc, .proj-desc { color: var(--text-2) !important; }
+
+/* Project filter buttons */
+.proj-filter {
+  background: var(--card) !important;
+  color: var(--text-3) !important;
+  border-color: var(--border) !important;
+}
+.proj-filter:hover, .proj-filter.active {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-color: var(--primary) !important;
+}
+
+/* ── Research cards ── */
+.res-card, #research .card {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+}
+.res-card:hover { background: var(--card-h) !important; border-color: var(--border-b) !important; }
+.res-title { color: var(--text) !important; }
+
+/* ── Awards cards ── */
+.award-card {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+}
+.award-card:hover { background: var(--card-h) !important; border-color: var(--border-b) !important; }
+.award-title { color: var(--text) !important; }
+
+/* ── Cards (generic .card) ── */
+.card {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+  color: var(--text-2) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.35) !important;
+}
+.card:hover {
+  background: var(--card-h) !important;
+  border-color: var(--border-b) !important;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.45), 0 0 0 1px rgba(232,0,122,0.18) !important;
+}
+
+/* ── Contact section ── */
+.c-form-wrap, .contact-form-box {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+}
+.c-input, .c-textarea, input[type="text"], input[type="email"], textarea {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+.c-input::placeholder, .c-textarea::placeholder { color: var(--text-4) !important; }
+.c-input:focus, .c-textarea:focus {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: var(--border-b) !important;
+}
+.c-label, label { color: var(--text-3) !important; }
+.c-item { color: var(--text-2) !important; }
+
+/* ── About / bio section ── */
+.bio-row-text, .about-text, .bio-desc { color: var(--text-2) !important; }
+.bio-photo::before { background: linear-gradient(to bottom, transparent 60%, rgba(8,15,36,0.5) 100%) !important; }
+
+/* Hero stat strip */
+.hero-stat { background: rgba(255,255,255,0.04) !important; }
+.hero-stat:hover { background: rgba(255,255,255,0.08) !important; }
+.hero-stats-grid {
+  background: rgba(255,255,255,0.03) !important;
+  border-color: rgba(232,0,122,0.12) !important;
+}
+
+/* ── Awards hero-like background strip ── */
+#awards {
+  background: linear-gradient(135deg, #080f24 0%, #0a1228 100%) !important;
+}
+
+/* ── Footer ── */
+footer {
+  background: #060c1e !important;
+  border-top-color: rgba(255,255,255,0.06) !important;
+  color: var(--text-3) !important;
+}
+footer a, .footer-link { color: var(--text-3) !important; }
+footer a:hover, .footer-link:hover { color: var(--primary) !important; }
+.footer-copy { color: var(--text-4) !important; }
+
+/* ── Scrollbar (webkit) ── */
+::-webkit-scrollbar { width: 6px; background: #060c1e; }
+::-webkit-scrollbar-thumb { background: rgba(232,0,122,0.35); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(232,0,122,0.6); }
+
+/* ── Selection highlight ── */
+::selection { background: rgba(232,0,122,0.30); color: #fff; }
