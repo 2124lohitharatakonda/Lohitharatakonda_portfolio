@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080f24"/>
+      <stop offset="100%" style="stop-color:#0d1b3e"/>
+    </linearGradient>
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8007a"/>
+      <stop offset="100%" style="stop-color:#7b00ff"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c8ff"/>
+      <stop offset="100%" style="stop-color:#0050cc"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8007a"/>
+      <stop offset="100%" style="stop-color:#00c8ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a56ff;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#080f24;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <rect width="600" height="400" fill="url(#centerGlow)"/>
+
+  <!-- Outer border glow -->
+  <rect x="1" y="1" width="598" height="398" rx="12" fill="none" stroke="rgba(0,200,255,0.15)" stroke-width="1"/>
+
+  <!-- ── HEADER BAR ── -->
+  <rect x="16" y="14" width="568" height="36" rx="7" fill="rgba(255,255,255,0.04)" stroke="rgba(0,200,255,0.12)" stroke-width="1"/>
+  <text x="30" y="37" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#00c8ff" letter-spacing="1">DATAVIZ PRO</text>
+  <text x="30" y="37" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#00c8ff" letter-spacing="1" filter="url(#glow)">DATAVIZ PRO</text>
+  <circle cx="530" cy="32" r="5" fill="#4ade80" filter="url(#glow)"/>
+  <text x="540" y="36" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4ade80">LIVE</text>
+  <!-- Nav dots -->
+  <rect x="150" y="26" width="28" height="8" rx="4" fill="rgba(232,0,122,0.5)"/>
+  <rect x="184" y="26" width="28" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="218" y="26" width="28" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="252" y="26" width="28" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- ── KPI CARDS ── -->
+  <!-- KPI 1 -->
+  <rect x="16" y="60" width="126" height="56" rx="7" fill="rgba(232,0,122,0.08)" stroke="rgba(232,0,122,0.3)" stroke-width="1"/>
+  <text x="28" y="79" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">TOTAL REVENUE</text>
+  <text x="28" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">$2.4M</text>
+  <text x="28" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#4ade80">▲ 18.3%</text>
+  <!-- KPI 2 -->
+  <rect x="150" y="60" width="126" height="56" rx="7" fill="rgba(0,200,255,0.08)" stroke="rgba(0,200,255,0.3)" stroke-width="1"/>
+  <text x="162" y="79" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">ACTIVE USERS</text>
+  <text x="162" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">84.2K</text>
+  <text x="162" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#4ade80">▲ 9.1%</text>
+  <!-- KPI 3 -->
+  <rect x="284" y="60" width="126" height="56" rx="7" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.3)" stroke-width="1"/>
+  <text x="296" y="79" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">CONVERSION</text>
+  <text x="296" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">6.8%</text>
+  <text x="296" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#fbbf24">▲ 2.4%</text>
+  <!-- KPI 4 -->
+  <rect x="418" y="60" width="166" height="56" rx="7" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.3)" stroke-width="1"/>
+  <text x="430" y="79" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="rgba(255,255,255,0.5)">PROFIT MARGIN</text>
+  <text x="430" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="800" fill="#fff">34.7%</text>
+  <text x="430" y="110" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#4ade80">▲ 5.2%</text>
+
+  <!-- ── BAR CHART ── -->
+  <rect x="16" y="128" width="270" height="150" rx="7" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="28" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Monthly Revenue</text>
+  <!-- Grid lines -->
+  <line x1="42" y1="155" x2="270" y2="155" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="42" y1="175" x2="270" y2="175" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="42" y1="195" x2="270" y2="195" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="42" y1="215" x2="270" y2="215" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="42" y1="235" x2="270" y2="235" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="42" y1="255" x2="270" y2="255" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Bars -->
+  <rect x="50"  y="210" width="22" height="48" rx="3" fill="url(#barGrad1)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="80"  y="185" width="22" height="73" rx="3" fill="url(#barGrad1)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="110" y="200" width="22" height="58" rx="3" fill="url(#barGrad2)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="140" y="170" width="22" height="88" rx="3" fill="url(#barGrad1)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="170" y="190" width="22" height="68" rx="3" fill="url(#barGrad2)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="200" y="162" width="22" height="96" rx="3" fill="url(#barGrad1)" filter="url(#glow)" opacity="0.9"/>
+  <rect x="230" y="178" width="22" height="80" rx="3" fill="url(#barGrad2)" filter="url(#glow)" opacity="0.9"/>
+  <!-- Month labels -->
+  <text x="58"  y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Jan</text>
+  <text x="91"  y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Feb</text>
+  <text x="121" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Mar</text>
+  <text x="151" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Apr</text>
+  <text x="181" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">May</text>
+  <text x="211" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Jun</text>
+  <text x="241" y="268" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)" text-anchor="middle">Jul</text>
+
+  <!-- ── LINE CHART ── -->
+  <rect x="295" y="128" width="289" height="150" rx="7" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="307" y="146" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Trend Analysis</text>
+  <!-- Grid -->
+  <line x1="307" y1="165" x2="576" y2="165" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="307" y1="190" x2="576" y2="190" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="307" y1="215" x2="576" y2="215" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="307" y1="240" x2="576" y2="240" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Area fill under line 1 -->
+  <path d="M315,245 L355,220 L395,230 L435,195 L475,210 L515,175 L555,185 L555,265 L315,265 Z" fill="rgba(232,0,122,0.08)"/>
+  <!-- Line 1 (pink) -->
+  <polyline points="315,245 355,220 395,230 435,195 475,210 515,175 555,185" fill="none" stroke="#e8007a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Area fill under line 2 -->
+  <path d="M315,255 L355,235 L395,248 L435,218 L475,232 L515,200 L555,215 L555,265 L315,265 Z" fill="rgba(0,200,255,0.06)"/>
+  <!-- Line 2 (cyan) -->
+  <polyline points="315,255 355,235 395,248 435,218 475,232 515,200 555,215" fill="none" stroke="#00c8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Dots on line 1 -->
+  <circle cx="315" cy="245" r="3" fill="#e8007a" filter="url(#glow)"/>
+  <circle cx="435" cy="195" r="3" fill="#e8007a" filter="url(#glow)"/>
+  <circle cx="515" cy="175" r="4" fill="#e8007a" filter="url(#glowStrong)"/>
+  <!-- Legend -->
+  <rect x="395" y="138" width="8" height="3" rx="1" fill="#e8007a"/>
+  <text x="406" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Revenue</text>
+  <rect x="445" y="138" width="8" height="3" rx="1" fill="#00c8ff"/>
+  <text x="456" y="142" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Growth</text>
+
+  <!-- ── PIE CHART ── -->
+  <rect x="16" y="288" width="160" height="100" rx="7" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="28" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Distribution</text>
+  <!-- Pie segments (simplified arcs) -->
+  <circle cx="80" cy="345" r="30" fill="none" stroke="#e8007a" stroke-width="18" stroke-dasharray="60 130" stroke-dashoffset="0" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="80" cy="345" r="30" fill="none" stroke="#00c8ff" stroke-width="18" stroke-dasharray="45 145" stroke-dashoffset="-60" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="80" cy="345" r="30" fill="none" stroke="#a78bfa" stroke-width="18" stroke-dasharray="25 165" stroke-dashoffset="-105" filter="url(#glow)" opacity="0.9"/>
+  <circle cx="80" cy="345" r="18" fill="#0d1b3e"/>
+  <text x="80" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">42%</text>
+  <!-- Legend -->
+  <circle cx="122" cy="328" r="4" fill="#e8007a"/>
+  <text x="130" y="332" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Cat A</text>
+  <circle cx="122" cy="345" r="4" fill="#00c8ff"/>
+  <text x="130" y="349" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Cat B</text>
+  <circle cx="122" cy="362" r="4" fill="#a78bfa"/>
+  <text x="130" y="366" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.5)">Cat C</text>
+
+  <!-- ── CORRELATION MATRIX ── -->
+  <rect x="186" y="288" width="399" height="100" rx="7" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="198" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.7)">Correlation Matrix</text>
+  <!-- Matrix cells 5x4 -->
+  <!-- Row 1 -->
+  <rect x="240" y="312" width="28" height="16" rx="2" fill="rgba(232,0,122,0.9)" opacity="0.95"/>
+  <rect x="272" y="312" width="28" height="16" rx="2" fill="rgba(232,0,122,0.5)"/>
+  <rect x="304" y="312" width="28" height="16" rx="2" fill="rgba(0,200,255,0.25)"/>
+  <rect x="336" y="312" width="28" height="16" rx="2" fill="rgba(232,0,122,0.35)"/>
+  <rect x="368" y="312" width="28" height="16" rx="2" fill="rgba(232,0,122,0.15)"/>
+  <!-- Row 2 -->
+  <rect x="240" y="332" width="28" height="16" rx="2" fill="rgba(232,0,122,0.5)"/>
+  <rect x="272" y="332" width="28" height="16" rx="2" fill="rgba(232,0,122,0.9)" opacity="0.95"/>
+  <rect x="304" y="332" width="28" height="16" rx="2" fill="rgba(232,0,122,0.6)"/>
+  <rect x="336" y="332" width="28" height="16" rx="2" fill="rgba(0,200,255,0.2)"/>
+  <rect x="368" y="332" width="28" height="16" rx="2" fill="rgba(232,0,122,0.4)"/>
+  <!-- Row 3 -->
+  <rect x="240" y="352" width="28" height="16" rx="2" fill="rgba(0,200,255,0.25)"/>
+  <rect x="272" y="352" width="28" height="16" rx="2" fill="rgba(232,0,122,0.6)"/>
+  <rect x="304" y="352" width="28" height="16" rx="2" fill="rgba(232,0,122,0.9)" opacity="0.95"/>
+  <rect x="336" y="352" width="28" height="16" rx="2" fill="rgba(232,0,122,0.45)"/>
+  <rect x="368" y="352" width="28" height="16" rx="2" fill="rgba(0,200,255,0.3)"/>
+  <!-- Row 4 -->
+  <rect x="240" y="372" width="28" height="16" rx="2" fill="rgba(232,0,122,0.35)"/>
+  <rect x="272" y="372" width="28" height="16" rx="2" fill="rgba(0,200,255,0.2)"/>
+  <rect x="304" y="372" width="28" height="16" rx="2" fill="rgba(232,0,122,0.45)"/>
+  <rect x="336" y="372" width="28" height="16" rx="2" fill="rgba(232,0,122,0.9)" opacity="0.95"/>
+  <rect x="368" y="372" width="28" height="16" rx="2" fill="rgba(232,0,122,0.55)"/>
+  <!-- Labels -->
+  <text x="198" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Revenue</text>
+  <text x="198" y="344" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Users</text>
+  <text x="198" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Conv.</text>
+  <text x="198" y="384" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Profit</text>
+  <!-- Colorbar -->
+  <defs>
+    <linearGradient id="colorbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(0,200,255,0.3)"/>
+      <stop offset="50%" style="stop-color:rgba(255,255,255,0.1)"/>
+      <stop offset="100%" style="stop-color:rgba(232,0,122,0.9)"/>
+    </linearGradient>
+  </defs>
+  <rect x="410" y="320" width="8" height="70" rx="3" fill="url(#colorbar)"/>
+  <text x="422" y="326" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">1.0</text>
+  <text x="422" y="360" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">0.0</text>
+  <text x="422" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">-1</text>
+
+  <!-- Upload indicator -->
+  <rect x="440" y="295" width="130" height="22" rx="5" fill="rgba(0,200,255,0.08)" stroke="rgba(0,200,255,0.25)" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="505" y="310" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="rgba(0,200,255,0.7)" text-anchor="middle">⬆ Upload CSV / Excel</text>
+</svg>
