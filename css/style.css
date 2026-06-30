@@ -1667,6 +1667,14 @@ a.edu-link:hover { color: var(--primary); }
 
 /* ── Experience ── */
 #experience { background: var(--bg2); }
+#experience .inner { max-width: 1400px !important; }
+.card.exp-card {
+  padding: 1.4rem 2rem 1.4rem 5rem !important;
+  min-height: 0 !important;
+}
+.card.exp-card .exp-head { margin-bottom: 0.6rem !important; }
+.card.exp-card .exp-bullets { gap: 0.3rem !important; }
+.card.exp-card .exp-bullets li { font-size: 0.82rem !important; line-height: 1.55 !important; }
 .exp-list::before {
   background: linear-gradient(to bottom, transparent, rgba(232,0,122,0.25) 10%, rgba(232,0,122,0.25) 90%, transparent);
 }
