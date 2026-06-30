@@ -2942,15 +2942,17 @@ footer a:hover, .footer-link:hover { color: var(--primary) !important; }
   .etag { font-size:0.75rem; padding:0.22rem 0.65rem; }
 }
 
-/* ── Education cards: wider inner so images are larger and text readable ── */
+/* ── Education cards: controlled size ── */
 #about .inner {
-  max-width: 1400px !important;
+  max-width: 1100px !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
 }
 .cards-row img {
   width: 100% !important;
   height: auto !important;
+  max-height: 320px !important;
+  object-fit: contain !important;
   display: block !important;
 }
 
