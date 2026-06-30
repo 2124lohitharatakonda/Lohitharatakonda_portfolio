@@ -322,7 +322,7 @@ ul  { list-style: none; }
 /* Outer scene wrapper — overflow visible so PNG pops above */
 .hero-photo-ring {
   position: relative;
-  width: 380px; height: 420px;
+  width: 380px; height: 460px;
   flex-shrink: 0;
   overflow: visible;
 }
@@ -440,7 +440,7 @@ ul  { list-style: none; }
 /* ── Portrait inside the gradient circle ── */
 .hero-photo-inner {
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
   left: 50%; transform: translateX(-50%);
   width: 360px; height: 360px;
   border-radius: 50%;
