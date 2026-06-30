@@ -61,7 +61,7 @@ img { max-width: 100%; height: auto; display: block; }
   --inner: 1200px;
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: hidden; font-size: 112.5%; /* 18px base — scales all rem units up */ }
 
 body {
   font-family: 'EB Garamond', Georgia, serif;
@@ -69,7 +69,7 @@ body {
   color: var(--text-2);
   overflow-x: hidden;
   font-size: 1.05rem;
-  line-height: 1.75;
+  line-height: 1.78;
   -webkit-font-smoothing: antialiased;
 }
 
