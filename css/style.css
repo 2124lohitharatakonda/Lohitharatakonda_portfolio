@@ -2933,6 +2933,82 @@ footer a:hover, .footer-link:hover { color: var(--primary) !important; }
   .etag { font-size:0.75rem; padding:0.22rem 0.65rem; }
 }
 
+/* ── Education cards: wider inner so images are larger and text readable ── */
+#about .inner {
+  max-width: 1400px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+.cards-row img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* ── Skills Grid (new card layout) ── */
+.skills-grid-new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.sgn-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem 1.5rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.sgn-card:hover {
+  border-color: rgba(232,0,122,0.4);
+  box-shadow: 0 6px 28px rgba(232,0,122,0.10);
+}
+.sgn-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pt);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.sgn-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.sgn-tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-3);
+  background: rgba(255,255,255,0.03);
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sgn-card:hover .sgn-tag {
+  border-color: rgba(232,0,122,0.25);
+}
+
+/* Bottom row: 2 cards centred */
+.skills-grid-new .sgn-card:nth-child(5),
+.skills-grid-new .sgn-card:nth-child(6) {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .skills-grid-new { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid-new .sgn-card:nth-child(5),
+  .skills-grid-new .sgn-card:nth-child(6) { grid-column: span 1; }
+}
+@media (max-width: 640px) {
+  .skills-grid-new { grid-template-columns: 1fr; }
+  .skills-grid-new .sgn-card:nth-child(5),
+  .skills-grid-new .sgn-card:nth-child(6) { grid-column: span 1; }
+  .sgn-card { padding: 1.2rem 1rem; }
+}
+
 /* ============================================================
    FINAL MEDIA QUERY AUDIT — all overflow & alignment fixes
    ============================================================ */
