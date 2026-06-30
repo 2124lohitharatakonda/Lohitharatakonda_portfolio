@@ -210,10 +210,9 @@ ul  { list-style: none; }
 
 .hero-inner {
   position: relative; z-index: 2;
-  max-width: 1500px; width: 100%; margin: 0 auto; padding: 5.5rem 4rem 3rem;
-  display: grid; grid-template-columns: 1fr 440px;
-  gap: 3rem; align-items: center;
-  width: 100%;
+  max-width: 1400px; width: 100%; margin: 0 auto; padding: 5.5rem 5rem 3rem;
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 4rem; align-items: center;
 }
 
 /* LEFT — text */
